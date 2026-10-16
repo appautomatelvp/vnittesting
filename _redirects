@@ -1,0 +1,5 @@
+/login /admin/index.html 200
+/admin /admin/index.html 200
+/admin/* /admin/index.html 200
+/en /index.html 200
+/en/* /:splat 200

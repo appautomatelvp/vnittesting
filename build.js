@@ -72,4 +72,12 @@ if (fs.existsSync(assetsSrc)) {
   copyDirRecursive(assetsSrc, assetsDest);
 }
 
-console.log('✨ Build completed! dist/ is ready for Vercel deployment.');
+// 5. Copy _redirects for Cloudflare Pages routing
+const redirectsSrc = path.join(rootDir, '_redirects');
+const redirectsDest = path.join(distDir, '_redirects');
+if (fs.existsSync(redirectsSrc)) {
+  fs.copyFileSync(redirectsSrc, redirectsDest);
+  console.log('🔀 Copied _redirects to dist/');
+}
+
+console.log('✨ Build completed! dist/ is ready for deployment.');
