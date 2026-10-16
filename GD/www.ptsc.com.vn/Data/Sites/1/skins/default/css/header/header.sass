@@ -1,0 +1,548 @@
+header
+	// height: 70px
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1)
+	z-index: 999
+	background: $white
+	padding: 7.5px 0
+	.left-wrap
+		margin-right: 30px
+		position: relative
+		z-index: 11
+		height: 50px
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		img , svg
+			width: 100%
+			height: 100%
+		svg 
+			max-height: 50px
+			max-width: 94px
+		a
+			display: inline-flex
+			justify-content: flex-start
+			align-items: center
+		.logo-en 
+			display: none
+	.top-wrap
+		padding-top: 6px
+		padding-bottom: 13px
+	// .top-wrap, .bottom-wrap
+	// 	margin-right: 30px
+	.bottom-wrap
+		display: none
+	.info-top
+		font-size: 12px
+		display: none
+		> li
+			padding-left: 20px
+			padding-right: 20px
+			+ li 
+				border-left: thin solid #e5e5e5
+			&:last-child
+				padding-right: 0
+		ol 
+			> li 
+				color: $text-99
+				> * 
+					&:first-child
+						color: $main
+						text-align: right
+						padding-right: 10px
+				&:first-child
+					span 
+						color: $light-blue
+				&:last-child
+					span 
+						color: $text-99
+		select 
+			height: auto
+			padding: 0
+			width: auto 
+			border: none
+			border-bottom: thin solid #cccccc
+			box-shadow: none
+			font-size: 12px
+			color: $main
+		table
+			width: 100%
+			margin: 0 !important
+		td 
+			padding: 0
+			a
+				color: $main
+				font-weight: 400
+			&:first-child
+				padding-right: 5px !important
+			&:nth-child(2)
+				color: $light-blue
+				padding-right: 4px !important
+	.main-menu
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 100%
+			background: $white
+			bottom: 0
+			width: 500%
+			pointer-events: none
+			z-index: 11
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 62px
+			background: $main
+			bottom: 0
+			width: 500%
+			pointer-events: none
+			transform: skewX(-45deg)
+		.mega-arrow
+			display: none
+		a
+			position: relative
+			padding: 3px 15px
+			height: 40px
+			display: flex
+			justify-content: center
+			align-items: center
+			z-index: 10
+		li
+			display: flex
+			justify-content: center
+			align-items: center
+			transition: .2s ease-in-out all
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%) skewX(-45deg)
+				background: $main
+				z-index: 1
+				width: 100%
+				height: 100%
+				pointer-events: none 
+			.mega-arrow
+				position: absolute
+				top: 11px
+				right: 8px
+				z-index: 11
+				pointer-events: none
+			.mega-menu
+				position: absolute
+				top: 110%
+				left: 0
+				width: max-content
+				padding-left: 0
+				padding: 0
+				opacity: 0
+				pointer-events: none
+				transition: .2s ease-in-out all
+				padding-top: 7px
+				min-width: 100%
+				.mega-list
+					overflow: hidden
+					background: $white
+					box-shadow: 0 0 10px 1px rgba(0,0,0,0.1)
+				a
+					padding: 12px 20px
+					background: $white
+					display: block
+					width: 100%
+					height: auto 
+					text-align: left
+				li
+					width: 100%
+					background: none 
+					+ li
+						border-top: thin solid rgba(#eeeeee, 1)
+					&::before
+						display: none
+						overflow: hidden
+					&:hover, &.active
+						a
+							background: $main
+			&.home-link
+				width: 60px
+				display: flex
+				justify-content: center
+				align-items: center
+				margin-right: 2px
+				a 
+					padding: 0
+					height: 40px
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 100%
+				em 
+					font-size: 18px
+					color: $white
+				+ li 
+					padding-left: 20px
+			&.no-hover
+				cursor: context-menu
+				&::before
+					display: none !important
+				> a
+					cursor: context-menu
+			&.active, &:hover
+				&:before
+					background: $light-blue
+				> a
+					color: $white
+			&.has-mega
+				> a
+					padding-right: 25px
+				&:hover 
+					.mega-menu
+						opacity: 1
+						pointer-events: auto
+						top: 100%
+	.language 
+		padding-left: 5px
+		padding-right: 5px
+		font-weight: 300
+		color: $text-99
+		font-size: 12px
+		height: 30px
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 30px
+		background: #f5f5f5
+		transition: .2s ease-in-out all
+		margin-left: 6px
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+		a 
+			&:hover 
+				color: $white
+		// &:hover 
+		// 	background: $main
+	.button-search 
+		height: 30px
+		width: 30px
+		display: flex
+		justify-content: center
+		align-items: center
+		color: $text-99
+		cursor: pointer
+		transition: .2s ease-in-out all
+		margin-left: 6px
+		background: #f5f5f5
+		margin-right: 10px
+		em 
+			font-size: 18px
+		&:hover 
+			color: $white
+			background: $main
+	@media(min-width: 1280px)
+		padding: 5px 0
+		.info-top
+			padding-right: 10px
+			display: flex
+		.bottom-wrap
+			display: flex !important
+		.button-search
+			margin-right: 0
+		.left-wrap
+			height: auto 
+			width: 180px
+			svg 
+				max-height: 95px
+				max-width: 180px
+		.main-menu
+			a
+				padding: 9.5px 10px
+				min-width: 95px
+				text-align: center
+			> li
+				&:before
+					width: 0
+					transition: .2s ease-in-out all
+				> a
+				&:hover, &.active, &.home-link
+					&:before
+						width: 100%
+				&:last-child
+					> a
+						overflow: hidden
+						&:after
+							content: ''
+							position: absolute
+							top: 0
+							right: -25px
+							background: $light-blue
+							width: 100%
+							height: 100%
+							opacity: 0
+							pointer-events: none 
+							transform: skewX(-45deg)
+							z-index: -1
+							transition: .2s ease-in-out all
+					&:hover, &.active
+						> a
+							&::after
+								opacity: 1
+	@media(min-width: 1366px)
+		.main-menu
+			a
+				padding: 9.5px 17px
+				min-width: 100px
+	@media(min-width: 1440px)
+		.main-menu
+			&:before
+				left: 83px
+			a
+				font-size: 16px
+			li
+				&.home-link
+					width: 80px
+				.mega-menu
+					min-width: 290px
+					a
+						padding: 13px 30px
+// button menu
+.navbar-toggler 
+	width: 36px
+	height: 36px
+	padding: 0
+	margin: 0
+	outline: 0
+	position: relative
+	border: none
+	background: 0 0
+	cursor: pointer
+	-webkit-appearence: none
+	-webkit-tap-highlight-color: transparent
+	box-shadow: none
+	overflow: hidden
+	svg 
+		width: 64px
+		height: 48px
+		top: -6px
+		left: -14px
+		stroke: $dark
+		stroke-width: 3px
+		fill: none
+		display: block
+		position: absolute
+		path 
+			transition: stroke-dasharray var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s)
+			stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px)
+			stroke-dashoffset: var(--offset, 126px)
+			transform: translateZ(0)
+			&:nth-child(2) 
+				--duration: .7s
+				--easing: ease-in
+				--offset: 100px
+				--array-2: 74px
+			&:nth-child(3) 
+				--offset: 133px
+				--array-2: 107px
+	&.active svg path 
+		--offset: 57px
+		&:nth-child(1),
+		&:nth-child(3) 
+			--delay: .15s
+			--easing: cubic-bezier(0.2, 0.4, 0.2, 1.1)
+		&:nth-child(2) 
+			--duration: .4s
+			--offset: 2px
+			--array-1: 1px
+		&:nth-child(3) 
+			--offset: 58px
+	@media(min-width: 1280px)
+		display: none !important
+
+// menu mobile 
+.mobile-wrap
+	position: absolute
+	top: calc(100% + 15px)
+	left: 50%
+	transform: translateX(-50%)
+	z-index: -1
+	width: 100%
+	padding: 20px
+	display: none
+	background: $main
+	max-width: calc(100% - 30px)
+	.main-menu
+		display: block
+		max-height: calc(100vh - 400px)
+		overflow-y: auto
+		overflow-x: hidden
+		margin-bottom: 20px
+		&::before
+			display: none !important
+		> li
+			padding-left: 0 !important
+			display: block
+			&::before
+				display: none !important
+			a
+				justify-content: flex-start
+				font-weight: 700
+				font-size: 16px
+			.mega-arrow
+				pointer-events: auto 
+				width: 30px
+				height: 30px
+				display: flex
+				justify-content: center
+				align-items: center
+				top: 5px
+				transition: .2s ease-in-out all
+				&.active
+					transform: rotate(180deg)
+			.mega-menu
+				padding: 0
+				position: static
+				padding-left: 15px
+				opacity: 1
+				pointer-events: auto 
+				width: 100%
+				display: none
+				transition: none
+				.mega-list
+					background: none
+					box-shadow: none
+					border-radius: 0
+				li
+					background: none
+					&.active, &:hover
+			&.active
+				> a
+					color: $light-blue
+	.info-top
+		flex-direction: column
+		overflow-y: auto
+		text-align: center
+		z-index: 1000
+		padding-top: 20px
+		justify-content: center
+		border-top: thin solid $white
+		display: flex
+		> li 
+			border: none
+			margin-left: auto 
+			margin-right: auto 
+			width: 100%
+			ol 
+				margin-bottom: 5px
+				> li 
+					p
+						&:first-child
+							color: $white
+							width: 110px
+			// &.WTI-Crude-Oi
+			// 	padding-left: 0
+		td 
+			a
+				color: white
+			&:first-child
+				width: 110px
+				text-align: right
+	&.active
+
+	@media(min-width: 1280px)
+		display: none !important
+
+.search-wrap
+	position: fixed !important
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+	height: 100%
+	z-index: 1001
+	background: rgba($black, 0.65)
+	pointer-events: none 
+	opacity: 0
+	transition: .4s ease-in-out all
+	transform: scale(0.5)
+	.searchbox
+		margin-top: 40%
+		width: 100%
+		position: relative
+		input
+			width: 100%
+			height: 50px
+			border: 2px solid $main 
+			padding: 5px 20px
+			font-size: 16px
+			font-weight: 400
+			color: $white
+			background: rgba($black, 0.65)
+			padding-right: 50px
+			&::placeholder
+				font-size: 12px
+				font-weight: 300
+				color: $white
+				font-style: italic
+		button
+			border: none 
+			background: none 
+			padding: 0
+			margin: 0
+			font-size: 0
+			color: $white
+			position: absolute
+			top: 7px
+			right: 40px
+			z-index: 11
+			&:before
+				font-family: 'Material Icons'
+				content: "search"
+				position: absolute
+				font-size: 24px
+	.btn-close
+		position: absolute
+		top: 15px
+		right: 15px 
+		z-index: 11 
+		font-size: r(40px)
+		color: #fff 
+		transition: .2s ease-in-out all
+		cursor: pointer
+		em 
+			display: flex
+			justify-content: center
+			align-items: center
+			transition: .3s ease-in-out all
+		&:hover 
+			em 
+				transform: rotate(180deg)
+	&.active
+		transform: scale(1)
+		opacity: 1  
+		pointer-events: auto 
+	@media(min-width: 1280px)
+		display: flex
+		justify-content: center
+		align-items: center
+		.searchbox
+			margin-top: 0
+		.btn-close
+			top: 20px 
+			right: 20px
+
+body.en-us
+	header 
+		.left-wrap 
+			.logo-vn
+				display: none
+			.logo-en
+				display: inline-flex

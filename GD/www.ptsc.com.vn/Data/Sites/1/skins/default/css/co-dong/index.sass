@@ -1,0 +1,109 @@
+.shareholder-1
+	.heading
+		align-items: center
+		margin-bottom: 20px
+	.main-title-2
+		margin-bottom: 0
+	.icon
+		display: none
+	.box-shareholder
+		.row
+			margin-top: -30px
+			> *
+				margin-top: 30px
+	.shareholder-box
+		height: 100%
+	@media(min-width: 425px)
+		.box-shareholder
+			.row
+				> *
+					flex: 0 0 50%
+					max-width: 50%
+	@media(min-width: 1024px)
+		.box-shareholder
+			.row
+				> *
+					flex: 0 0 25%
+					max-width: 25%
+	@media(min-width: 1280px)
+		.heading
+			height: 100%
+			flex-direction: column
+			align-items: flex-start
+			margin-bottom: 0
+		.button
+			margin-bottom: 10px
+		.boding
+			display: flex
+			margin-left: -15px
+			margin-right: -15px
+		.icon 
+			display: block
+			width: 100% 
+			max-width: 15%
+			flex: 0 0 15%
+			padding-left: 35px
+			padding-right: 15px
+		.box-shareholder
+			width: 100% 
+			max-width: 85%
+			flex: 0 0 85%
+			padding-left: 15px
+			padding-right: 15px
+	@media(min-width: 1440px)
+		.icon 
+			max-width: 20%
+			flex: 0 0 20%
+			padding-left: 90px
+		.box-shareholder
+			max-width: 80%
+			flex: 0 0 80%
+.shareholder-2
+	.swiper
+		padding-bottom: 20px
+	.swiper-scrollbar
+		background: #e5e5e5
+		border-radius: 0
+	.swiper-scrollbar-drag
+		background: $main
+		border-radius: 0
+	@media(min-width: 1280px)
+		overflow: hidden
+		.swiper
+			padding-bottom: 45px
+			overflow: visible
+.shareholder-3
+	.row
+		margin-top: -30px
+		> *
+			margin-top: 30px
+	@media(min-width: 1280px)
+		.shareholder-category .caption .title
+			font-size: 30px
+	@media(min-width: 1440px)
+		.box-content
+			padding-top: 100px
+			padding-bottom: 100px
+.shareholder-4
+	.main-title
+		margin-bottom: 20px
+	.zone-wrap
+		margin-bottom: 30px
+		&:last-child
+			margin-bottom: 0
+	.row
+		margin-top: -30px
+		> *
+			margin-top: 30px
+	.button
+		margin-top: 30px
+	.shareholder-news-item
+		height: 100%
+		.title
+			display: block
+	@media(min-width: 1240px)
+		.zone-wrap
+			margin-bottom: 50px
+	@media(min-width: 1440px)
+		padding-top: 80px
+		padding-bottom: 80px

@@ -1,0 +1,214 @@
+.form-group 
+	margin-bottom: 15px
+	label 
+		margin-bottom: 5px
+		font-size: 12px
+		color: $black
+		width: 100%
+		font-weight: 600
+		text-transform: uppercase
+		> span
+			color: #db1e18
+	input:not([type="file"]),
+	input:not(.ruRemove),
+	input:not([type="button"]),
+	select,
+	textarea
+		width: 100%
+		padding: 5px 20px
+		font-size: 14px
+		border: thin solid #d9e2ec
+		color: $dark
+		font-weight: 500
+		caret-color: $main
+		background-color: #f5f8fa
+		height: 40px
+		&::placeholder
+			color: #999999
+			font-size: 14px
+			font-weight: 400
+		&:focus
+			outline: none
+			border-color: $main
+			box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3)
+	textarea
+		padding-top: 10px
+		height: 100px
+	span
+		color: red
+		font-size: 13px
+	&.form-icon
+		position: relative
+		.label-icon 
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: 5px
+			width: 30px
+			height: 40px
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-bottom: 0
+			em 
+				font-size: 20px
+				color: #999
+		input 
+			padding-left: 40px
+	&.qupload
+		.RadAsyncUpload
+			width: 100% !important
+		.ruInputs
+			width: 100%
+		li
+			span
+				+ input
+					&.ruRemove
+						width: auto 
+						height: 24px 
+						padding: 0
+						padding-left: 15px
+						margin-left: 15px
+			&:last-child
+				.ruFileWrap 
+					height: 40px
+					width: 100%
+				input
+					height: 40px
+					background-color: #e0e0e0
+					border-color: #e0e0e0
+					font-size: 12px
+					font-weight: 600
+					color: $dark
+					text-align: center
+					text-transform: uppercase
+					font-family: 'Exo', sans-serif
+	@media(min-width: 1280px)
+		input:not([type="file"]),
+		select,
+		textarea
+			height: 50px
+			font-size: 16px
+		&.form-icon 
+			.label-icon
+				width: 40px
+				height: 50px
+				em 
+					font-size: 24px
+			input 
+				padding-left: 50px
+		&.qupload
+			li
+				&:last-child
+					.ruFileWrap 
+						height: 50px
+					input
+						height: 50px
+.frm-captcha
+	margin-bottom: 0
+	> *
+		margin-bottom: 10px
+	@media(min-width: 1024px)
+		display: flex
+		// flex-direction: row-reverse
+		justify-content: flex-start
+.RadCaptcha 
+	display: flex
+	// flex-direction: column-reverse
+	position: relative
+	width: 100% !important
+	// justify-content: flex-end
+	.rcRefreshImage
+		font-size: 0
+		margin-right: 20px
+		&:before
+			content: url(/Data/Sites/1/skins/default/img/change.png)
+	> div
+		> div
+			display: flex
+			align-items: center
+			flex-direction: row-reverse
+	> span 
+		position: absolute
+		top: 100%
+		left: 0
+		z-index: 11
+		width: 100%
+	@media(min-width: 1024px)
+		width: auto !important
+		justify-content: flex-start
+		flex-direction: column-reverse
+		// margin-right: 15px
+.frm-captcha-input
+	label
+		font-size: 12px
+		font-weight: 600
+		color: $dark
+	@media(min-width: 1280px)
+		input
+			min-width: 200px
+			max-width: 275px
+			// max-width: 200px
+.frm-btnwrap
+	margin-bottom: 0
+	label
+		display: none
+	.frm-btn-reset
+		display: none
+	.frm-btn
+		width: max-content
+		position: relative
+		min-width: 145px
+		margin-left: auto
+		&:before
+			content: url('../img/arrow-button.png')
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			z-index: 11
+			right: 24px
+		input
+			width: 100%
+			color: $white
+			background: $main !important
+			border-color: $main
+			border: none
+			height: 50px
+			width: auto
+			font-size: 14px
+			font-weight: 400
+			background: none 
+			text-transform: uppercase
+			padding-right: 30px
+			width: 145px
+	@media(min-width: 768px)
+		display: flex
+		align-items: center
+		height: 100%
+		.frm-btn
+			display: flex
+.wrap-form
+	.row 
+		margin-left: -10px
+		margin-right: -10px
+		> * 
+			padding-right: 10px
+			padding-left: 10px
+	@media(min-width: 1024px)
+		display: flex
+		flex-wrap: wrap
+		align-items: flex-end
+		> *
+			flex: 0 0 100%
+			max-width: 100%
+			width: 100%
+		.form-group.frm-captcha
+			flex: 0 0 calc(100% - 165px)
+			max-width: calc(100% - 165px)
+			margin-bottom: 0
+			> *
+				margin-bottom: 0
+		.form-group.frm-btnwrap
+			flex: 0 0 165px
+			max-width: 165px
+			padding-left: 20px

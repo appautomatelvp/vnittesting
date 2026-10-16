@@ -1,0 +1,122 @@
+.service-detail
+	.box-category
+		margin-bottom: 30px
+		border-left: none
+	.category-title
+		background: $main
+		padding: 7px 15px
+		color: $white
+		&.active
+			em
+				transform: rotate(180deg)
+	.navbar-category
+		display: none
+		
+		a
+			min-width: 130px
+			height: 100%
+			padding-left: 5px
+			padding-right: 5px
+		li
+			margin-right: 10px
+			&.active, &:hover
+				a
+					&::before
+						bottom: -6px
+	.main-title
+		margin-bottom: 20px
+	.img-scale 
+		background: #000
+		+img-scale(650/980)
+	.swiper-slide-next, .swiper-slide-prev
+		.img-scale
+			img
+				opacity: 0.5
+	.main-slide
+		margin-bottom: 20px
+	.main-button
+		margin-top: 20px
+		> *
+			margin-left: 10px
+			margin-right: 10px
+	.button-prev, .button-next
+		img
+			height: 30px
+	.box-full 
+		background-color: #f5f5f5
+		padding: 15px
+		margin-bottom: 5px
+	.full-content 
+		max-width: 990px
+		> *
+			margin-bottom: 15px
+			&:last-child
+				margin-bottom: 0
+		ul
+			padding-left: 0
+			list-style-type: none 
+		li
+			padding-left: 25px
+			position: relative
+			margin-bottom: 10px
+			&:before
+				font-family: 'Material Icons'
+				content: 'arrow_right_alt'
+				position: absolute
+				top: 0
+				left: 0
+				font-size: 20px
+				color: $main
+				line-height: 1
+	.box-brief
+		padding: 15px
+		background-color: #e5e5e5
+	.brief-content 
+		max-width: 990px
+		.title
+			margin-bottom: 20px
+		.row 
+			margin-left: -8px
+			margin-right: -8px
+			margin-top: -16px
+			> *
+				padding-left: 8px
+				padding-right: 8px
+				margin-top: 16px
+				text-align: center
+	@media(min-width: 576px)
+		.box-full, .box-brief
+			padding: 25px
+	@media(min-width: 1280px)
+		.main-slide
+			margin-bottom: 5px
+		.button-prev, .button-next
+			margin: 0
+			img
+				height: 42px
+		.main-button
+			margin-top: 0
+			.button-prev
+				left: 6.3829787234%
+			.button-next
+				right: 6.3829787234%
+		.full-content
+			> *
+				margin-bottom: 20px
+		.box-full, .box-brief
+			padding: 25px 25px 35px 25px
+		.category-title
+			display: none !important
+		.navbar-category
+			display: flex !important
+			li
+				&.active, &:hover
+					a
+						transform: none 
+						&::before
+							bottom: -8px
+		.brief-content 
+			.row
+				> *
+					flex: 0 0 calc(100% / 7)
+					max-width: calc(100% / 7)

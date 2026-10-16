@@ -1,0 +1,193 @@
+.service-1
+	.row
+		margin-top: -30px
+		> *
+			margin-top: 30px
+.service-2
+	@media(min-width: 1280px)
+		.image-wrap
+			text-align: center
+			img
+				height: calc(100vh - 105px)
+				width: auto
+				margin-left: auto
+				margin-right: auto
+	@media(min-width: 1440px)
+		padding-top: 90px
+.service-3
+	.number
+		width: 40px
+		height: 40px
+		min-width: 40px
+		display: flex
+		justify-content: center
+		align-items: center
+		color: $white
+	.tabslet-tab
+		display: flex
+		align-items: center
+		max-width: 100%
+		// overflow-x: auto 
+		flex-wrap: wrap
+		.title
+			padding-left: 10px
+			padding-right: 10px
+			transition: color 0.6s cubic-bezier(0.61, 1, 0.88, 1)
+		a
+			min-width: fit-content
+			width: max-content
+			display: flex
+			align-items: center
+			font-size: 14px
+		li
+			margin-right: 2px
+			background: #f5f5f5
+			position: relative
+			width: 100%
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 0
+				height: 100%
+				transition: width 0.6s cubic-bezier(0.61, 1, 0.88, 1)
+				z-index: 1
+			> *
+				z-index: 11
+				position: relative
+			&.green
+				&:before
+					background-color: $green
+				.number
+					background-color: $green
+			&.light-green
+				&:before
+					background-color: $light-green
+				.number
+					background-color: $light-green
+			&.orange
+				&:before
+					background-color: $orange
+				.number
+					background-color: $orange
+			&.yellow
+				&:before
+					background-color: $yellow
+				.number
+					background-color: $yellow
+			&.blue
+				&:before
+					background-color: $blue
+				.number
+					background-color: $blue
+			&.active
+				&:before
+					width: 100%
+				.title
+					color: $white
+	.tabslet-content
+		padding: 20px
+		&.green
+			background-color: $green
+			.accordion-item
+				&.active
+					.title
+						&::before
+							background-color: $green
+						em
+							color: $green
+		&.light-green
+			background-color: $light-green
+			.accordion-item
+				&.active
+					.title
+						&::before
+							background-color: $light-green
+						em
+							color: $light-green
+		&.orange
+			background-color: $orange
+			.accordion-item
+				&.active
+					.title
+						&::before
+							background-color: $orange
+						em
+							color: $orange
+		&.yellow
+			background-color: $yellow
+			.accordion-item
+				&.active
+					.title
+						&::before
+							background-color: $yellow
+						em
+							color: $yellow
+		&.blue
+			background-color: $blue
+			.accordion-item
+				&.active
+					.title
+						&::before
+							background-color: $blue
+						em
+							color: $blue
+	@media(min-width: 1280px)
+		// padding-top: 0
+		overflow: hidden
+		.number
+			width: 80px
+			height: 80px
+			min-width: 80px
+			font-size: 36px
+		.main-tabslet-accordion
+			display: flex
+		.tabslet-tab
+			flex: 0 0 35%
+			max-width: 35%
+			width: 100%
+			display: block
+			overflow: hidden
+			.title
+				padding-left: 15px
+				padding-right: 15px
+				font-size: 24px
+			li
+				margin-right: 0
+				margin-bottom: 1px
+			a
+				width: 100%
+		.tabslet-content-wrap
+			flex: 0 0 65%
+			max-width: 65%
+			width: 100%
+		.tabslet-content
+			padding: 40px 50px 70px 50px
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 1000%
+				height: 100%
+				z-index: -1
+				pointer-events: none 
+			&.green
+				&:before
+					background-color: $green
+			&.light-green
+				&:before
+					background-color: $light-green
+			&.orange
+				&:before
+					background-color: $orange
+			&.yellow
+				&:before
+					background-color: $yellow
+			&.blue
+				&:before
+					background-color: $blue
+	@media(min-width: 1440px)
+		padding-bottom: 90px

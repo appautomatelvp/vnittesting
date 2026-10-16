@@ -1,0 +1,233 @@
+.form-popup
+	max-width: 100%
+	width: 810px
+	display: none
+	.row
+		> *
+			margin-bottom: 15px
+	.form-group
+		margin-bottom: 10px
+		&:last-child
+			margin-bottom: 0
+		&.frm-btnwrap
+			margin-bottom: 0
+	.popup-title
+		margin-bottom: 3px
+	.main-title
+		margin-bottom: 20px
+	@media(min-width: 768px)
+		.form-group
+			&.qparagraph 
+				height: 100%
+			textarea
+				height: calc(100% - 23px)
+	@media(min-width: 1280px)
+		padding: 50px 60px 70px 60px !important
+.content-popup
+	max-width: 1040px
+	width: 100%
+	padding: 20px 0 !important
+	display: none
+	&.about-3-popup
+		padding: 20px !important
+	.project-popup-section
+		padding: 0 20px
+	.main-slide
+		margin-bottom: 30px
+	.mySwiper2
+		margin-bottom: 10px
+		.img-scale
+			+img-scale(720/1000)
+	.mySwiper
+		.img-scale
+			cursor: pointer
+			+img-scale(80/120)
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				background: none 
+				width: 100%
+				height: 100%
+				border: 3px solid rgba($main, 0.5)
+				z-index: 11
+				pointer-events: none 
+		.swiper-slide-thumb-active
+			.img-scale
+				&:before
+					border-color: rgba($main, 1)
+	.title
+		margin-bottom: 15px
+	.main-button
+		margin: 0
+		> *
+			margin: 0
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			z-index: 11
+			width: 40px
+			height: 40px
+			background: $main
+			color: $white
+		.button-prev 
+			left: 0
+		.button-next
+			right: 0
+	.about-popup-section
+		ul
+			padding-left: 0
+			list-style-type: none
+		li
+			position: relative
+			padding-left: 15px
+			line-height: 1.3
+			margin-bottom: 10px
+			&:before
+				content: ''
+				position: absolute
+				top: 7px
+				left: 0
+				background: $main
+				width: 5px
+				height: 5px
+	.year-number
+		margin-bottom: 20px
+	.desc 
+		text-align: justify
+		* 
+			margin-bottom: 10px
+	@media(min-width: 768px)
+		.main-slide
+			padding-right: 130px
+		.mySwiper2 
+			.img-scale
+				img
+					object-fit: contain
+		.mySwiper
+			position: absolute
+			top: 0
+			right: 0
+			width: 120px
+			height: 100%
+			z-index: 11
+			.img-scale
+				&:before
+					border-color: rgba($blue, 0.5)
+			.swiper-slide-thumb-active
+				.img-scale
+					&:before
+						border-color: rgba($light-blue, 1)
+	@media(min-width: 1024px)
+		.project-popup-section
+			max-height: 80vh
+			overflow-y: auto 
+			+scroll-y(5px)
+		// .mySwiper
+		// 	max-width: 770px
+		.content 
+			padding-left: 30px
+			padding-right: 20px
+			padding-bottom: 25px
+		.carousel__button
+			top: 0 !important
+			right: -50px !important
+			background: $main
+			border-radius: 0
+			width: 50px !important
+			height: 50px !important
+		.main-button
+			> *
+				width: 50px
+				height: 50px
+				&:hover
+					background: $light-blue
+		.about-popup-section
+			li
+				margin-bottom: 20px
+				&:last-child
+					margin-bottom: 0
+		.year-number
+			margin-bottom: 30px
+	@media(min-width: 1280px)
+		&.about-3-popup
+			padding: 50px 40px !important
+		.desc 
+			* 
+				margin-bottom: 15px
+.about-popup
+	max-width: 1230px
+	width: 100%
+	padding: 20px 0 !important
+	display: none
+	.about-popup-section
+		padding: 0 20px
+	.title
+		margin-bottom: 15px
+	.main-image
+		background: linear-gradient(325deg, rgba(35,58,122,1) 0%, rgba(0,131,193,1) 50%, rgba(91,203,245,1) 100%)
+		display: block
+		position: relative
+		padding-top: calc(600/450*100%)
+		margin-bottom: 20px
+		img
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 11
+			width: 100%
+			height: 100%
+			object-fit: contain
+	.title
+		margin-bottom: 3px
+	.sub-title
+		margin-bottom: 15px
+	.line
+		margin-bottom: 20px
+		background: $light-blue
+		width: 30px
+		height: 5px
+	.desc
+		ul
+			padding-left: 0
+			list-style-type: none
+		li
+			position: relative
+			padding-left: 15px
+			line-height: 1.3
+			margin-bottom: 3px
+			&:before
+				content: ''
+				position: absolute
+				top: 7px
+				left: 0
+				background: $main
+				width: 5px
+				height: 5px
+	@media(min-width: 1024px)
+		.about-popup-section
+			max-height: 80vh
+			overflow-y: auto 
+			+scroll-y(5px)
+		.content 
+			padding-left: 30px
+			padding-right: 20px
+			padding-bottom: 25px
+		.box-content
+			display: flex
+			flex-wrap: wrap
+		.main-image
+			padding-top: 0
+			width: 450px
+			min-width: 450px
+			height: 600px
+			margin-bottom: 0
+		.content
+			width: calc( 100% - 450px )
+			padding-left: 30px
+			padding-top: 30px
+			padding-bottom: 0
+	@media(min-width: 1280px)
+		.content
+			padding-left: 50px

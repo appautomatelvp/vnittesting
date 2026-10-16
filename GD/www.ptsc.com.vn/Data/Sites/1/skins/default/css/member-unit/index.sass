@@ -1,0 +1,64 @@
+.member-section
+	.main-title
+		padding-bottom: 15px
+		border-bottom: thin solid $main
+		margin-bottom: 20px
+		span
+			color: $main
+	.row
+		margin-top: -30px
+		> *
+			margin-top: 30px
+	.main-tabslet
+		margin-top: 30px
+	.tabslet-tab
+		border-top: none 
+		border-bottom: thin solid #e5e5e5
+		a
+			text-align: center
+			&::before
+				top: auto 
+				bottom: -15px
+				content: url(../img/icon/arrow-top-blue.png)
+		li
+			&.active
+				a
+					text-shadow: 0.5px 0 0 rgba($main, 1)
+					&::before
+						top: auto 
+						bottom: -7px
+	.tabslet-content
+		margin-top: 30px
+	@media(min-width: 1280px)
+		.main-title
+			margin-bottom: 30px
+		.desc-wrap 
+			margin-bottom: 30px
+			max-width: 1340px
+		.tabslet-tab
+			justify-content: center
+			a
+				font-size: 18px
+				font-weight: 500
+			li
+				&.active
+					a
+						&::before
+							bottom: -5px
+		.tabslet-content
+			margin-top: 40px
+	@media(min-width: 1440px)
+		padding-top: 80px
+		padding-bottom: 80px
+.member-list-section
+	.navbar-category
+		margin-bottom: 20px
+		li
+			margin-left: 10px
+			margin-right: 10px
+	@media(min-width: 1280px)
+		.navbar-category
+			margin-bottom: 50px
+			li
+				margin-left: 22px
+				margin-right: 22px

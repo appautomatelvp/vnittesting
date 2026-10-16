@@ -1,0 +1,251 @@
+.recruitment-page
+	.hidden-list
+		display: none
+.recruitment-1
+	padding-bottom: 0
+	.background-div
+		position: relative
+		overflow: hidden
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			background: linear-gradient(135deg, rgba(35,58,122,1) 0%, rgba(0,131,193,1) 50%, rgba(91,203,245,1) 100%)
+			width: 100%
+			height: 100%
+			z-index: -1
+	.main-title
+		line-height: 1.1
+		margin-bottom: 15px
+	.desc
+		margin-bottom: 20px
+		> *
+			margin-bottom: 20px
+			&:last-child
+				margin-bottom: 0
+	.box-content
+		position: relative
+	.img-scale
+		+img-scale(650/1455)
+	.box-image
+		margin-bottom: 30px
+	@media(min-width: 1024px)
+		.background-div
+			min-height: 500px
+			&:before
+				right: 60%
+				width: 70%
+				transform: skewX(-35deg)
+		.row 
+			> *
+				position: static
+		.box-image 
+			pointer-events: none
+			position: absolute
+			top: 0
+			left: 42%
+			width: 87%
+			transform: skewX(-35deg)
+			overflow: hidden
+			height: 100%
+			img
+				transform: skewX(35deg)
+				left: -30%
+			.image
+				padding-top: 0
+				height: 100%
+		.desc
+			max-width: 340px
+	@media(min-width: 1280px)
+		.desc
+			margin-bottom: 30px
+		.main-title
+			margin-bottom: 25px
+	@media(min-width: 1440px)
+		padding-top: 90px
+		.background-div
+			min-height: 650px
+			&:before
+				right: 64.5%
+		.box-image
+			left: 39.5%
+		.box-content
+			padding-top: 90px
+.recruitment-2
+	.main-title
+		margin-bottom: 20px
+	.box-content
+		padding-top: 30px
+		padding-bottom: 30px
+	.row
+		margin-top: -30px
+		> *
+			margin-top: 30px
+	.box-item 
+		position: relative
+	.img-scale 
+		background: #000
+		+img-scale(255/450)
+		img 
+			opacity: 0.6
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			background: linear-gradient(135deg, rgba(35,58,122,1) 0%, rgba(0,131,193,1) 50%, rgba(91,203,245,1) 100%)
+			z-index: 10
+			width: 100%
+			height: 100%
+			transition: .2s ease-in-out all
+			opacity: 0
+			pointer-events: none 
+	.caption
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		padding: 20px
+		z-index: 11
+	.icon
+		margin-bottom: 10px
+	.desc-wrap
+		margin-bottom: 20px
+	@media(min-width: 1280px)
+		.box-content
+			padding-bottom: 60px
+		.desc-wrap
+			margin-bottom: 30px
+		.caption
+			padding: 30px
+		.box-item 
+			&:hover
+				.image
+					&:before
+						opacity: 0.9
+	@media(min-width: 1440px)
+		.box-content
+			padding-top: 35px
+			padding-bottom: 80px
+.recruitment-3
+	.main-title
+		margin-bottom: 15px
+	.row
+		margin-top: -30px
+		> *
+			margin-top: 30px
+	.img-scale
+		+img-scale(435/690)
+	.desc
+		ul
+			padding-left: 0
+			list-style-type: none 
+		li
+			padding-left: 25px
+			position: relative
+			font-size: 16px
+			margin-bottom: 10px
+			&:before
+				font-family: 'Material Icons'
+				content: 'arrow_right_alt'
+				position: absolute
+				top: 0
+				left: 0
+				font-size: 20px
+				color: $main
+				line-height: 1
+	@media(min-width: 1280px)
+		.box-content
+			padding-left: 30px
+		.desc
+			max-width: 610px
+	@media(min-width: 1440px)
+		padding-top: 80px
+		padding-bottom: 85px
+		.box-content
+			padding-left: 35px
+		.desc
+			max-width: 545px
+.recruitment-4
+	background: #f8f8f8
+	border-bottom: thin solid #e1e1e1
+	@media(min-width: 1024px)
+		.row
+			flex-direction: row-reverse
+.recruitment-5
+	.main-title
+		margin-bottom: 15px
+	.table-title
+		display: none
+	.main-button
+		> *
+			width: 40px
+			height: 40px
+			display: flex
+			justify-content: center
+			align-items: center
+			transition: .2s ease-in-out all
+			background: $main
+			color: $white
+			margin: 20px 10px
+			em
+				font-weight: 700
+			&:hover 
+				background: $main
+	.swiper-slide
+		&:nth-child(odd)
+			background: #f6f9ff
+		&:nth-child(even)
+			background: #eef2fb
+	.table-title
+		> *
+			border-right: thin solid $white
+			background: $main
+			padding: 10px 5px
+			font-size: 16px
+			&:last-child
+				border: none 
+			&:not(.title)
+				width: 14%
+				text-align: center
+		.title 
+			width: 30%
+			padding-left: 20px
+	@media(min-width: 1024px)
+		.table-title
+			display: flex
+		.main-button 
+			.button-prev 
+				left: 10px
+			.button-next 
+				right: 10px
+	@media(min-width: 1280px)
+		.table-title
+			> *
+				font-size: 20px
+				padding: 15px 10px
+			.title
+				padding-left: 40px
+		.main-button 
+			> *
+				width: 50px
+				height: 50px
+				margin: 0
+			.button-prev 
+				left: -10px
+			.button-next 
+				right: -10px
+		.swiper-slide
+			cursor: pointer
+			transition: .2s ease-in-out all
+			&:hover
+				background: #e2ebff
+	@media(min-width: 1580px)
+		padding-bottom: 80px
+		.main-button 
+			.button-prev 
+				left: -80px
+			.button-next 
+				right: -80px

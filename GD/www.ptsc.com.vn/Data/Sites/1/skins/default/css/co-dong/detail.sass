@@ -1,0 +1,86 @@
+.shareholder-dt
+	.mySwiper
+		border-bottom: thin solid #e5e5e5
+		margin-bottom: 20px
+	.year-thumbs
+		padding-top: 15px
+		padding-bottom: 15px
+		color: $text-bb
+		cursor: pointer
+		transition: .2s ease-in-out all
+		position: relative
+		&:before
+			content: url(../img/icon/arrow-top-blue.png)
+			position: absolute
+			bottom: -15px
+			left: 50%
+			transform: translateX(-50%)
+			z-index: 11
+			pointer-events: none 
+			transition: .2s ease-in-out all
+			opacity: 0
+	.swiper-slide-thumb-active
+		.year-thumbs
+			color: $main
+			&:before
+				opacity: 1
+				bottom: -7px
+	.button-prev, .button-next
+		img
+			height: 30px
+	.button-prev
+		margin-right: 15px
+	.button-next
+		margin-left: 15px
+	.caption
+		margin-bottom: 25px
+	.mySwiperBox
+		padding-bottom: 80px
+		.swiper-pagination
+			flex-wrap: wrap
+		.swiper-pagination-bullet
+			width: 40px
+			height: 40px
+			border: thin solid #f5f5f5
+			background: $white
+			font-size: 16px
+			font-weight: 400
+			color: $text-66
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-bottom: 5px
+			&:hover
+				background: #f5f5f5
+			&.swiper-pagination-bullet-active
+				border-color: $main
+				background: $main
+				color: $light-blue
+	@media(min-width: 1280px)
+		.year-thumbs
+			padding-top: 21.5px
+			padding-bottom: 21.5px
+			&:hover
+				color: $main
+		.swiper-slide-thumb-active
+			.year-thumbs
+				transform: scale(1.1)
+				&:before
+					bottom: -5px
+		.mySwiper
+			margin-bottom: 45px
+		.button-prev, .button-next
+			img
+				height: 42px
+		.button-prev
+			margin-right: 30px
+		.button-next
+			margin-left: 30px
+		.caption
+			margin-bottom: 35px
+		.mySwiperBox
+			.swiper-pagination-bullet
+				width: 50px
+				height: 50px
+				margin-left: 10px
+				margin-right: 10px

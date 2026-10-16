@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html class="notranslate" translate="no" lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google" content="notranslate" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>VNIT - Công ty TNHH Kiểm định và Dịch vụ Kỹ thuật Việt Nam</title>
+  <meta name="description" content="VNIT - Đơn vị được Bộ KH&CN chỉ định (ĐK 426) và công nhận VILAS 1288 (ISO/IEC 17025:2017), ISO 9001:2015 chuyên kiểm định, hiệu chuẩn đo lường, bảo dưỡng van và tổng thầu EPC kỹ thuật dầu khí." />
+  <meta property="og:title" content="VNIT - Kiểm định & Dịch vụ Kỹ thuật Việt Nam" />
+  <meta property="og:image" content="assets/images/banner-4-vnit-01.jpg" />
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="assets/css/global.min.css" />
+  <link rel="stylesheet" href="assets/css/main.min.css" />
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/fancybox.css" />
+  <link rel="stylesheet" href="assets/css/vnit-custom.css" />
+
+  <!-- Icons & Fonts -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script>
+    if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+    (function () {
+      try {
+        var isReload = false;
+        var navEntries = performance.getEntriesByType('navigation');
+        if (navEntries && navEntries.length > 0) {
+          isReload = (navEntries[0].type === 'reload');
+        } else if (window.performance && window.performance.navigation) {
+          isReload = (window.performance.navigation.type === 1);
+        }
+        if (isReload && window.location.hash) {
+          window.location.replace('index.html');
+          return;
+        }
+      } catch (e) {}
+      if (window.location.hash) { window.scrollTo(0, 0); }
+    })();
+  </script>
+</head>
+
+<body class="vnit-body home-page">
+  <div id="wrapper">
+    <!-- ==================== HEADER ==================== -->
+    <header>
+      <div class="header-wrap">
+        <!-- Logo -->
+        <div class="left-wrap">
+          <a href="index.html" class="logo-vn" title="VNIT Industrial Engineering" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+            <img src="assets/images/logo-VNIT-kiem-dinh-viet-nam-01.png" alt="VNIT Logo" style="height: 52px; width: auto; object-fit: contain;" />
+            <div style="display: flex; flex-direction: column;">
+              <span style="font-family: 'Exo', sans-serif; font-size: 26px; font-weight: 900; color: var(--vnit-primary); line-height: 1; letter-spacing: 1px;">VNIT</span>
+              <span style="font-size: 10px; font-weight: 700; color: var(--vnit-accent); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 3px;">KIỂM ĐỊNH &amp; DỊCH VỤ KỸ THUẬT</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Navigation & Actions -->
+        <div class="right-wrap">
+          <!-- Top Utility Bar -->
+          <div class="top-wrap">
+            <ul class="top-info">
+              <li>
+                <i class="ri-phone-fill" style="color: var(--vnit-accent);"></i>
+                <span>Hotline: <a href="tel:0977232346"><strong>0977.2323.46</strong></a></span>
+              </li>
+              <li>
+                <i class="ri-mail-fill" style="color: var(--vnit-accent);"></i>
+                <span>Email: <a href="mailto:info@cal-test.vn">info@cal-test.vn</a></span>
+              </li>
+              <li>
+                <span class="top-badge" style="background: #eef6fd; color: var(--vnit-primary); border: 1px solid #c8e1f8;">
+                  <i class="ri-award-fill" style="color: var(--vnit-accent);"></i> VILAS 1288 (ISO/IEC 17025) &amp; ISO 9001:2015
+                </span>
+              </li>
+            </ul>
+
+            <div class="header-actions" style="display: flex; align-items: center; gap: 8px;">
+              <!-- Bilingual Language Switcher -->
+              <div class="lang-switch-box" title="Chọn ngôn ngữ / Choose language">
+                <button type="button" class="lang-btn active" data-lang-btn="vi" title="Tiếng Việt">
+                  <img src="assets/images/flag-vn.png" alt="VN" class="flag-icon" /> VN
+                </button>
+                <span class="lang-sep">|</span>
+                <button type="button" class="lang-btn" data-lang-btn="en" title="English">
+                  <img src="assets/images/flag-en.png" alt="EN" class="flag-icon" /> EN
+                </button>
+              </div>
+
+              <button class="btn-search-toggle" type="button" title="Tìm kiếm">
+                <i class="ri-search-line"></i>
+              </button>
+              <div class="header-badge-logo" style="margin-left: 8px; border-left: 1px solid #e2e8f0; padding-left: 10px;">
+                <img src="assets/images/LOGO-ILAC-VILAS-ISO-17025-ISO-9001-2015-VNIT-01-800x202.png" alt="BoA VILAS 1288 & ISO 9001:2015" style="height: 32px; width: auto; object-fit: contain;" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Main Menu (Skewed Tabs Style with GDC Colors) -->
+          <div class="bottom-wrap">
+            <ul class="main-menu">
+              <li class="home-link notranslate" data-no-i18n="true">
+                <a href="index.html" title="Trang chủ" aria-label="Trang chủ"><i class="ri-home-4-fill"></i></a>
+              </li>
+
+              <!-- GIỚI THIỆU -->
+              <li class="has-mega">
+                <a href="gioi-thieu.html" title="Giới thiệu">
+                  Giới thiệu <i class="ri-arrow-down-s-line mega-arrow"></i>
+                </a>
+                <div class="mega-menu">
+                  <ul>
+                    <li><a href="gioi-thieu.html#gioi-thieu-chung"><i class="ri-information-line"></i> Giới thiệu chung</a></li>
+                    <li><a href="gioi-thieu.html#tam-nhin"><i class="ri-eye-line"></i> Tầm nhìn</a></li>
+                    <li><a href="gioi-thieu.html#su-menh"><i class="ri-compass-3-line"></i> Sứ mệnh</a></li>
+                    <li><a href="gioi-thieu.html#gia-tri-cot-loi"><i class="ri-shield-star-line"></i> Giá trị cốt lõi</a></li>
+                    <li><a href="gioi-thieu.html#lich-su"><i class="ri-history-line"></i> Lịch sử hình thành và phát triển</a></li>
+                    <li><a href="gioi-thieu.html#khach-hang-doi-tac"><i class="ri-shake-hands-line"></i> Khách hàng và đối tác</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <!-- NĂNG LỰC -->
+              <li class="has-mega">
+                <a href="nang-luc.html" title="Năng lực">
+                  Năng lực <i class="ri-arrow-down-s-line mega-arrow"></i>
+                </a>
+                <div class="mega-menu">
+                  <ul>
+                    <li><a href="nang-luc.html#chung-nhan"><i class="ri-award-line"></i> Chứng nhận</a></li>
+                    <li><a href="nang-luc.html#nhan-luc"><i class="ri-team-line"></i> Nhân lực</a></li>
+                    <li><a href="nang-luc.html#trang-thiet-bi"><i class="ri-tools-line"></i> Trang thiết bị</a></li>
+                    <li><a href="nang-luc.html#co-so-ha-tang"><i class="ri-building-line"></i> Cơ sở hạ tầng</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <!-- DỊCH VỤ -->
+              <li class="has-mega">
+                <a href="dich-vu.html" title="Dịch vụ">
+                  Dịch vụ <i class="ri-arrow-down-s-line mega-arrow"></i>
+                </a>
+                <div class="mega-menu" style="min-width: 440px;">
+                  <ul>
+                    <li><a href="dich-vu.html#dich-vu-1"><i class="ri-dashboard-3-line"></i> Kiểm định, hiệu chuẩn, thử nghiệm đo lường - tự động</a></li>
+                    <li><a href="dich-vu.html#dich-vu-2"><i class="ri-cpu-line"></i> Thi công, chế tạo, lắp đặt hệ thống điện, đo lường &amp; viễn thông</a></li>
+                    <li><a href="dich-vu.html#dich-vu-3"><i class="ri-settings-4-line"></i> Thiết kế - Mua sắm – Thi công - Lắp đặt - Chạy thử (EPC)</a></li>
+                    <li><a href="dich-vu.html#dich-vu-4"><i class="ri-sound-module-line"></i> Bảo dưỡng, sửa chữa và thử nghiệm các loại van</a></li>
+                    <li><a href="dich-vu.html#dich-vu-5"><i class="ri-tools-fill"></i> Bảo dưỡng, sửa chữa thiết bị và hệ thống cơ khí</a></li>
+                    <li><a href="dich-vu.html#dich-vu-6"><i class="ri-flashlight-line"></i> Bảo dưỡng, sửa chữa, nâng cấp hệ thống điện &amp; tự động</a></li>
+                    <li><a href="dich-vu.html#dich-vu-7"><i class="ri-exchange-box-line"></i> Thương mại và cho thuê thiết bị kỹ thuật</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <!-- DỰ ÁN -->
+              <li class="has-mega">
+                <a href="du-an.html" title="Dự án">
+                  Dự án <i class="ri-arrow-down-s-line mega-arrow"></i>
+                </a>
+                <div class="mega-menu">
+                  <ul>
+                    <li><a href="du-an.html#du-an-tieu-bieu"><i class="ri-star-line"></i> Dự án tiêu biểu</a></li>
+                    <li><a href="du-an.html#ngoai-khoi"><i class="ri-ship-line"></i> Dự án Dầu khí ngoài khơi</a></li>
+                    <li><a href="du-an.html#loc-hoa-dau"><i class="ri-oil-line"></i> Dự án Lọc hóa dầu &amp; Hóa chất</a></li>
+                    <li><a href="du-an.html#nang-luong"><i class="ri-temp-hot-line"></i> Dự án Năng lượng &amp; Công nghiệp</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <!-- TIN TỨC -->
+              <li><a href="tin-tuc.html" title="Tin tức">Tin tức</a></li>
+
+              <!-- TUYỂN DỤNG -->
+              <li><a href="tuyen-dung.html" title="Tuyển dụng">Tuyển dụng</a></li>
+
+              <!-- LIÊN HỆ -->
+              <li><a href="lien-he.html" title="Liên hệ">Liên hệ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button class="navbar-toggler" type="button" aria-label="Toggle menu">
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
+
+      <!-- Search Overlay Box -->
+      <div class="search-wrap">
+        <div class="search-inner">
+          <input type="text" placeholder="Nhập từ khóa tìm kiếm dịch vụ, dự án, năng lực VNIT..." />
+          <button type="submit" class="btn-submit-search"><i class="ri-search-line"></i></button>
+          <button type="button" class="btn-close-search"><i class="ri-close-line"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-overlay"></div>
+    <div class="mobile-nav-drawer">
+      <div class="mobile-drawer-header">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <img src="assets/images/logo-VNIT-kiem-dinh-viet-nam-01.png" alt="VNIT Logo" style="height: 38px; width: auto;" />
+          <span style="color: #fff; font-weight: 800; font-size: 18px;">VNIT</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div class="lang-switch-box" style="background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.25);">
+            <button type="button" class="lang-btn active" data-lang-btn="vi" style="color: #fff;"><img src="assets/images/flag-vn.png" alt="VN" class="flag-icon" /> VN</button>
+            <span class="lang-sep" style="color: rgba(255,255,255,0.4);">|</span>
+            <button type="button" class="lang-btn" data-lang-btn="en" style="color: #fff;"><img src="assets/images/flag-en.png" alt="EN" class="flag-icon" /> EN</button>
+          </div>
+          <button class="mobile-drawer-close" type="button"><i class="ri-close-line"></i></button>
+        </div>
+      </div>
+      <ul class="mobile-nav-list">
+        <li class="active"><a href="index.html">Trang chủ</a></li>
+        <li class="has-sub">
+          <a href="gioi-thieu.html">Giới thiệu <i class="ri-arrow-down-s-line sub-toggle-icon"></i></a>
+          <ul class="mobile-sub-menu">
+            <li><a href="gioi-thieu.html#gioi-thieu-chung">Giới thiệu chung</a></li>
+            <li><a href="gioi-thieu.html#tam-nhin">Tầm nhìn</a></li>
+            <li><a href="gioi-thieu.html#su-menh">Sứ mệnh</a></li>
+            <li><a href="gioi-thieu.html#gia-tri-cot-loi">Giá trị cốt lõi</a></li>
+            <li><a href="gioi-thieu.html#lich-su">Lịch sử hình thành và phát triển</a></li>
+            <li><a href="gioi-thieu.html#khach-hang-doi-tac">Khách hàng và đối tác</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="nang-luc.html">Năng lực <i class="ri-arrow-down-s-line sub-toggle-icon"></i></a>
+          <ul class="mobile-sub-menu">
+            <li><a href="nang-luc.html#chung-nhan">Chứng nhận</a></li>
+            <li><a href="nang-luc.html#nhan-luc">Nhân lực</a></li>
+            <li><a href="nang-luc.html#trang-thiet-bi">Trang thiết bị</a></li>
+            <li><a href="nang-luc.html#co-so-ha-tang">Cơ sở hạ tầng</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="dich-vu.html">Dịch vụ <i class="ri-arrow-down-s-line sub-toggle-icon"></i></a>
+          <ul class="mobile-sub-menu">
+            <li><a href="dich-vu.html#dich-vu-1">Kiểm định, hiệu chuẩn, thử nghiệm</a></li>
+            <li><a href="dich-vu.html#dich-vu-2">Thi công, chế tạo E&amp;I và viễn thông</a></li>
+            <li><a href="dich-vu.html#dich-vu-3">Thiết kế - Mua sắm – Thi công (EPC)</a></li>
+            <li><a href="dich-vu.html#dich-vu-4">Bảo dưỡng, sửa chữa và thử van</a></li>
+            <li><a href="dich-vu.html#dich-vu-5">Bảo dưỡng, sửa chữa thiết bị cơ khí</a></li>
+            <li><a href="dich-vu.html#dich-vu-6">Bảo dưỡng, nâng cấp điện &amp; tự động</a></li>
+            <li><a href="dich-vu.html#dich-vu-7">Thương mại &amp; cho thuê thiết bị</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="du-an.html">Dự án <i class="ri-arrow-down-s-line sub-toggle-icon"></i></a>
+          <ul class="mobile-sub-menu">
+            <li><a href="du-an.html#du-an-tieu-bieu">Dự án tiêu biểu</a></li>
+            <li><a href="du-an.html#ngoai-khoi">Dầu khí ngoài khơi</a></li>
+            <li><a href="du-an.html#loc-hoa-dau">Lọc hóa dầu</a></li>
+            <li><a href="du-an.html#nang-luong">Năng lượng &amp; Công nghiệp</a></li>
+          </ul>
+        </li>
+        <li><a href="tin-tuc.html">Tin tức</a></li>
+        <li><a href="tuyen-dung.html">Tuyển dụng</a></li>
+        <li><a href="lien-he.html">Liên hệ</a></li>
+      </ul>
+    </div>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="main">
+      <!-- 1. Hero Panoramic Swiper Banner (Full Bleed Edge-to-Edge) -->
+      <section class="hero-banner-section">
+        <div class="swiper hero-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 (Real GDC Offshore Fabrication Panoramic) -->
+            <div class="swiper-slide">
+              <div class="hero-slide-item">
+                <img src="assets/images/banner-4-vnit-01.jpg" alt="Dự án Ngoài khơi VNIT" class="hero-bg-img" />
+                <div class="banner-skew-caption">
+                  <div class="banner-skew-title-box">
+                    <h1 data-i18n="hero.slide1.title">KIỂM ĐỊNH, HIỆU CHUẨN ĐO LƯỜNG VÀ DỊCH VỤ KỸ THUẬT CÔNG NGHIỆP</h1>
+                  </div>
+                  <div class="banner-skew-meta">
+                    <span class="banner-skew-badge"><i class="ri-award-fill"></i> <span data-i18n="hero.slide1.badge">VILAS 1288 (ISO/IEC 17025) &amp; ISO 9001:2015</span></span>
+                    <a href="dich-vu.html" class="btn-vnit btn-vnit-primary" style="padding: 9px 22px; font-size: 13.5px;">
+                      <span data-i18n="hero.slide1.btn1">Khám phá 7 Dịch vụ</span> <img src="assets/images/arrow-button.png" class="btn-arrow-icon" alt="" />
+                    </a>
+                    <a href="lien-he.html" class="btn-vnit btn-vnit-secondary" style="padding: 9px 22px; font-size: 13.5px;" data-i18n="hero.slide1.btn2">
+                      Yêu cầu Báo giá
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 (Industrial Facility Panoramic) -->
+            <div class="swiper-slide">
+              <div class="hero-slide-item">
+                <img src="assets/images/banner-1.jpg" alt="Xưởng Dịch vụ Van VNIT" class="hero-bg-img" />
+                <div class="banner-skew-caption">
+                  <div class="banner-skew-title-box">
+                    <h2 data-i18n="hero.slide2.title">BẢO DƯỠNG, SỬA CHỮA VÀ THỬ NGHIỆM VAN CÔNG NGHIỆP ĐẾN 15,000 PSI</h2>
+                  </div>
+                  <div class="banner-skew-meta">
+                    <span class="banner-skew-badge"><i class="ri-tools-fill"></i> <span data-i18n="hero.slide2.badge">CHUẨN API 527 &amp; API 598</span></span>
+                    <a href="dich-vu.html#dich-vu-4" class="btn-vnit btn-vnit-primary" style="padding: 9px 22px; font-size: 13.5px;">
+                      <span data-i18n="hero.slide2.btn1">Xưởng Dịch Vụ Van</span> <img src="assets/images/arrow-button.png" class="btn-arrow-icon" alt="" />
+                    </a>
+                    <a href="nang-luc.html" class="btn-vnit btn-vnit-outline" style="border-color: #fff; color: #fff; padding: 9px 22px; font-size: 13.5px;" data-i18n="hero.slide2.btn2">
+                      Năng Lực Thiết Bị
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 (Offshore Platform Panoramic) -->
+            <div class="swiper-slide">
+              <div class="hero-slide-item">
+                <img src="assets/images/project-hera.jpg" alt="Dự án Ngoài khơi VNIT" class="hero-bg-img" />
+                <div class="banner-skew-caption">
+                  <div class="banner-skew-title-box">
+                    <h2 data-i18n="hero.slide3.title">TỔNG THẦU EPC HỆ THỐNG ĐIỆN, ĐO LƯỜNG VÀ TỰ ĐỘNG HÓA CÔNG TRÌNH</h2>
+                  </div>
+                  <div class="banner-skew-meta">
+                    <span class="banner-skew-badge"><i class="ri-cpu-line"></i> <span data-i18n="hero.slide3.badge">THIẾT KẾ - MUA SẮM - THI CÔNG - CHẠY THỬ</span></span>
+                    <a href="du-an.html" class="btn-vnit btn-vnit-primary" style="padding: 9px 22px; font-size: 13.5px;">
+                      <span data-i18n="hero.slide3.btn1">Xem Dự Án Tiêu Biểu</span> <img src="assets/images/arrow-button.png" class="btn-arrow-icon" alt="" />
+                    </a>
+                    <a href="lien-he.html" class="btn-vnit btn-vnit-secondary" style="padding: 9px 22px; font-size: 13.5px;" data-i18n="hero.slide3.btn2">
+                      Tư Vấn Kỹ Thuật
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 (Coastal Engineering & Vessels) -->
+            <div class="swiper-slide">
+              <div class="hero-slide-item">
+                <img src="assets/images/banner-2.jpg" alt="Cơ sở hạ tầng VNIT" class="hero-bg-img" />
+                <div class="banner-skew-caption">
+                  <div class="banner-skew-title-box">
+                    <h2 data-i18n="hero.slide4.title">CÂN CHỈNH ĐỒNG TÂM TRỤC LASER VÀ PHÂN TÍCH RUNG ĐỘNG CHẨN ĐOÁN MÁY</h2>
+                  </div>
+                  <div class="banner-skew-meta">
+                    <span class="banner-skew-badge"><i class="ri-settings-5-fill"></i> <span data-i18n="hero.slide4.badge">EASY-LASER &amp; BEAMEX MC6</span></span>
+                    <a href="dich-vu.html#dich-vu-5" class="btn-vnit btn-vnit-primary" style="padding: 9px 22px; font-size: 13.5px;">
+                      <span data-i18n="hero.slide4.btn1">Cơ Khí Chính Xác</span> <img src="assets/images/arrow-button.png" class="btn-arrow-icon" alt="" />
+                    </a>
+                    <a href="lien-he.html" class="btn-vnit btn-vnit-secondary" style="padding: 9px 22px; font-size: 13.5px;" data-i18n="hero.slide4.btn2">
+                      Hỗ Trợ Hiện Trường 24/7
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination hero-pagination"></div>
+        </div>
+      </section>
+
+      <!-- 2. Full-Width News Ticker Strip ("TIN NỔI BẬT") -->
+      <div class="news-ticker-strip">
+        <div class="news-ticker-label">
+          <i class="ri-flashlight-fill" style="color: var(--vnit-accent);"></i> <span data-i18n="ticker.label">TIN NỔI BẬT</span>
+        </div>
+        <div class="news-ticker-content">
+          <div class="ticker-marquee">
+            <a href="tin-tuc.html" class="ticker-item">
+              <span class="ticker-date">15/10/2026</span>
+              <span data-i18n="ticker.item1">VNIT hoàn thành xuất sắc chiến dịch kiểm định &amp; bảo dưỡng an toàn mỏ Lô 01&amp;02 ngoài khơi</span>
+            </a>
+            <a href="tin-tuc.html" class="ticker-item">
+              <span class="ticker-date">05/10/2026</span>
+              <span data-i18n="ticker.item2">Mở rộng phạm vi công nhận BoA VILAS 1288 ISO/IEC 17025 cho phép đo Lưu lượng &amp; Áp lực cao 15,000 PSI</span>
+            </a>
+            <a href="tin-tuc.html" class="ticker-item">
+              <span class="ticker-date">28/09/2026</span>
+              <span data-i18n="ticker.item3">VNIT ký kết hợp đồng kiểm định &amp; thử nghiệm bình áp lực cao cùng Thăng Long JOC</span>
+            </a>
+            <a href="tin-tuc.html" class="ticker-item">
+              <span class="ticker-date">18/09/2026</span>
+              <span data-i18n="ticker.item4">Hội thảo quốc tế về công nghệ cân chỉnh laser và phân tích rung động chẩn đoán máy quay cùng chuyên gia Easy-Laser</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Section Giới thiệu tổng quan Doanh nghiệp (Expansive Layout) -->
+      <section class="section" style="padding: 70px 0 50px;">
+        <div class="container-wide" style="text-align: center;">
+          <span class="section-subtitle" data-i18n="overview.subtitle">TỔNG QUAN DOANH NGHIỆP</span>
+          <h2 style="font-family: 'Exo', sans-serif; font-size: 32px; font-weight: 900; color: var(--vnit-primary); margin: 10px 0 6px; text-transform: uppercase; letter-spacing: 0.5px;" data-i18n="overview.title">
+            CÔNG TY TNHH KIỂM ĐỊNH VÀ DỊCH VỤ KỸ THUẬT VIỆT NAM (VNIT)
+          </h2>
+          <p style="font-size: 14px; font-weight: 700; color: var(--vnit-accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 22px;" data-i18n="overview.eng_title">
+            VIET NAM TECHNICAL SERVICES &amp; INSPECTION COMPANY LIMITED
+          </p>
+          <div class="section-divider"></div>
+          
+          <p style="font-size: 16px; line-height: 1.8; color: var(--vnit-text-muted); max-width: 1050px; margin: 0 auto 30px; text-align: center;" data-i18n="overview.desc">
+            Được thành lập theo Giấy chứng nhận ĐKKD số <strong>3502379813</strong> do Sở Kế hoạch &amp; Đầu tư tỉnh Bà Rịa - Vũng Tàu cấp ngày 19/11/2018, cùng Giấy chứng nhận hoạt động số <strong>53/GCN-BKHCN</strong> (Số đăng ký <strong>ĐK 426</strong>) của Bộ Khoa Học &amp; Công Nghệ. Trải qua hơn 10 năm xây dựng và phát triển bền vững, <strong>VNIT</strong> đã khẳng định vị thế dẫn đầu trong lĩnh vực đo lường, thử nghiệm phòng lab đạt chuẩn quốc tế <strong>VILAS 1288 (ISO/IEC 17025:2017)</strong>, hệ thống quản lý chất lượng <strong>ISO 9001:2015</strong>, xưởng dịch vụ đại tu van đến 15,000 PSI và tổng thầu EPC hệ thống điện - tự động hóa cho các công trình dầu khí, lọc hóa dầu và công nghiệp trọng điểm quốc gia.
+          </p>
+
+          <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <a href="gioi-thieu.html" class="btn-vnit btn-vnit-primary">
+              <span data-i18n="overview.btn_about">Xem Hồ sơ Giới thiệu VNIT</span> <img src="assets/images/arrow-button.png" class="btn-arrow-icon" alt="" />
+            </a>
+            <a href="nang-luc.html" class="btn-vnit btn-vnit-outline" data-i18n="overview.btn_cap">
+              Hồ sơ Năng lực VILAS 1288
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Full-Width Statistics Banner with Authentic Industrial Background -->
+      <section class="full-stats-section">
+        <div class="stats-grid-wide">
+          <div class="stat-item-wide">
+            <div class="stat-icon-wrap"><i class="ri-shield-star-line"></i></div>
+            <div class="stat-number-wide">10+</div>
+            <div class="stat-title-wide" data-i18n="stats.years">Năm Phát Triển Bền Vững</div>
+            <div class="stat-desc-wide" data-i18n="stats.years_desc">Khẳng định thương hiệu cal-test.vn từ 2018</div>
+          </div>
+          <div class="stat-item-wide">
+            <div class="stat-icon-wrap"><i class="ri-building-line"></i></div>
+            <div class="stat-number-wide">1,000+</div>
+            <div class="stat-title-wide" data-i18n="stats.projects">Dự Án Đã Thực Hiện</div>
+            <div class="stat-desc-wide" data-i18n="stats.projects_desc">Tại các giàn khoan và nhà máy công nghiệp</div>
+          </div>
+          <div class="stat-item-wide">
+            <div class="stat-icon-wrap"><i class="ri-award-line"></i></div>
+            <div class="stat-number-wide">100%</div>
+            <div class="stat-title-wide" data-i18n="stats.vilas">Chuẩn BoA VILAS 1288 &amp; ISO 9001</div>
+            <div class="stat-desc-wide" data-i18n="stats.vilas_desc">Được Bộ Khoa Học &amp; Công Nghệ chỉ định ĐK 426</div>
+          </div>
+          <div class="stat-item-wide">
+            <div class="stat-icon-wrap"><i class="ri-dashboard-3-line"></i></div>
+            <div class="stat-number-wide">15,000 PSI</div>
+            <div class="stat-title-wide" data-i18n="stats.pressure">Dải Áp Lực Thử Nghiệm Van</div>
+            <div class="stat-desc-wide" data-i18n="stats.pressure_desc">Trạm thử áp lực thủy tĩnh theo chuẩn API 527/598</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Section 7 Dịch vụ Cốt lõi (Bổ sung hình ảnh công nghệ cao & hiệu ứng bay vào) -->
+      <section class="section section-bg-light service-fly-section">
+        <div class="container-wide">
+          <div class="section-header">
+            <span class="section-subtitle" data-i18n="services.subtitle">DỊCH VỤ TOÀN DIỆN</span>
+            <h2 class="section-title" data-i18n="services.title">7 LĨNH VỰC DỊCH VỤ VNIT CUNG CẤP</h2>
+            <div class="section-divider"></div>
+            <p class="section-desc" data-i18n="services.desc">
+              Hệ thống dịch vụ kỹ thuật khép kín theo tiêu chuẩn quốc tế, đáp ứng đầy đủ yêu cầu khắt khe của các công trình công nghiệp và năng lượng.
+            </p>
+          </div>
+
+          <div class="services-horizontal-list service-fly-cluster" id="services-fly-cluster">
+            <!-- Service 01 -->
+            <div class="service-hor-item">
+              <div class="service-hor-card">
+                <div class="service-hor-thumb">
+                  <img src="assets/images/webheader-krohne-mydevice.jpg" alt="Kiểm định, hiệu chuẩn, thử nghiệm đo lường - tự động" class="service-hor-img" />
+                  <div class="service-hor-overlay"></div>
+                  <span class="service-hor-badge"><i class="ri-award-fill"></i> VILAS 1288 / ISO 17025</span>
+                  <span class="service-hor-num">01</span>
+                </div>
+                <div class="service-hor-body">
+                  <div class="service-hor-meta">
+                    <div class="service-hor-icon"><i class="ri-dashboard-3-line"></i></div>
+                    <span class="service-hor-category">ĐO LƯỜNG &amp; HIỆU CHUẨN</span>
+                  </div>
+                  <h3 class="service-hor-title" data-i18n="services.s1.title">Kiểm định, hiệu chuẩn, thử nghiệm đo lường - tự động</h3>
+                  <p class="service-hor-desc" data-i18n="services.s1.desc">
+                    Hiệu chuẩn áp suất, nhiệt độ, lưu lượng, mức, phân tích khí, thiết bị điện - điện tử phòng lab VILAS 1288 và tại hiện trường công trình.
+                  </p>
+                  <ul class="service-hor-highlights">
+                    <li><i class="ri-checkbox-circle-fill"></i> Phòng Thử Nghiệm Chuẩn Quốc Tế ISO/IEC 17025</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Thiết bị chuẩn sơ cấp từ Fluke, Beamex, Druck, Krohne</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Dịch vụ Onsite Mobile Lab 24/7 tại nhà máy &amp; giàn khoan</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Cấp chứng chỉ hiệu chuẩn có giá trị toàn cầu</li>
+                  </ul>
+                  <div class="service-hor-footer">
+                    <a href="dich-vu.html#dich-vu-1" class="service-hor-btn">
+                      <span data-i18n="services.link">Chi tiết dịch vụ</span> <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="lien-he.html" class="service-hor-btn-outline">
+                      <i class="ri-customer-service-2-line"></i> Tư vấn &amp; Báo giá
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 02 -->
+            <div class="service-hor-item">
+              <div class="service-hor-card">
+                <div class="service-hor-thumb">
+                  <img src="assets/images/IMG_5423-600x800.jpg" alt="Thi công, chế tạo, lắp đặt hệ thống điện, đo lường & viễn thông" class="service-hor-img" style="object-position: center 25%;" />
+                  <div class="service-hor-overlay"></div>
+                  <span class="service-hor-badge"><i class="ri-cpu-line"></i> E&amp;I &amp; Telecom Offshore</span>
+                  <span class="service-hor-num">02</span>
+                </div>
+                <div class="service-hor-body">
+                  <div class="service-hor-meta">
+                    <div class="service-hor-icon"><i class="ri-cpu-line"></i></div>
+                    <span class="service-hor-category">THI CÔNG &amp; LẮP ĐẶT ĐIỆN - ĐO LƯỜNG</span>
+                  </div>
+                  <h3 class="service-hor-title" data-i18n="services.s2.title">Thi công, chế tạo, lắp đặt hệ thống điện, đo lường &amp; viễn thông</h3>
+                  <p class="service-hor-desc" data-i18n="services.s2.desc">
+                    Lắp đặt cáp động lực, thang máng cáp, chế tạo tủ bảng điện điều khiển (LCP, Marshalling), thiết bị đo hiện trường và hệ thống viễn thông.
+                  </p>
+                  <ul class="service-hor-highlights">
+                    <li><i class="ri-checkbox-circle-fill"></i> Kéo rải &amp; đấu nối cáp động lực, cáp điều khiển chống cháy ngầm/nổi</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Chế tạo tủ phân phối điện, tủ điều khiển cục bộ LCP, Marshalling Cabinet</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Hệ thống viễn thông công nghiệp: PAGA, CCTV, LAN, cáp quang biển</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Đội ngũ kỹ sư chứng chỉ BOSIET/Huet đáp ứng chuẩn giàn khoan khắt khe</li>
+                  </ul>
+                  <div class="service-hor-footer">
+                    <a href="dich-vu.html#dich-vu-2" class="service-hor-btn">
+                      <span data-i18n="services.link">Chi tiết dịch vụ</span> <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="lien-he.html" class="service-hor-btn-outline">
+                      <i class="ri-customer-service-2-line"></i> Tư vấn &amp; Báo giá
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 03 -->
+            <div class="service-hor-item">
+              <div class="service-hor-card">
+                <div class="service-hor-thumb">
+                  <img src="assets/images/project-hera.jpg" alt="Thiết kế - Mua sắm – Thi công - Lắp đặt - Chạy thử (EPC)" class="service-hor-img" />
+                  <div class="service-hor-overlay"></div>
+                  <span class="service-hor-badge"><i class="ri-settings-4-line"></i> Tổng Thầu EPC / Turnkey</span>
+                  <span class="service-hor-num">03</span>
+                </div>
+                <div class="service-hor-body">
+                  <div class="service-hor-meta">
+                    <div class="service-hor-icon"><i class="ri-settings-4-line"></i></div>
+                    <span class="service-hor-category">TỔNG THẦU EPC &amp; CHẠY THỬ HỆ THỐNG</span>
+                  </div>
+                  <h3 class="service-hor-title" data-i18n="services.s3.title">Thiết kế - Mua sắm – Thi công - Lắp đặt - Chạy thử (EPC)</h3>
+                  <p class="service-hor-desc" data-i18n="services.s3.desc">
+                    Tổng thầu EPC trọn gói các gói thầu điện, đo lường điều khiển (ICSS/SCADA/DCS/ESD/F&amp;G) cho các công trình công nghiệp và dầu khí.
+                  </p>
+                  <ul class="service-hor-highlights">
+                    <li><i class="ri-checkbox-circle-fill"></i> Thiết kế kỹ thuật FEED &amp; Detailed Engineering chuẩn quốc tế</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Mua sắm vật tư thiết bị đạt chuẩn chống cháy nổ ATEX, IECEx, Class Div 1</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Tích hợp hệ thống tự động hóa ICSS, DCS, ESD, F&amp;G đồng bộ</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Nghiệm thu Pre-commissioning, Commissioning &amp; bàn giao chìa khóa trao tay</li>
+                  </ul>
+                  <div class="service-hor-footer">
+                    <a href="dich-vu.html#dich-vu-3" class="service-hor-btn">
+                      <span data-i18n="services.link">Chi tiết dịch vụ</span> <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="lien-he.html" class="service-hor-btn-outline">
+                      <i class="ri-customer-service-2-line"></i> Tư vấn &amp; Báo giá
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 04 -->
+            <div class="service-hor-item">
+              <div class="service-hor-card">
+                <div class="service-hor-thumb">
+                  <img src="assets/images/z5734006150820_779fb6aa77bf5a84fbbd12074e9febae-534x400.jpg" alt="Bảo dưỡng, sửa chữa và thử nghiệm các loại van" class="service-hor-img" />
+                  <div class="service-hor-overlay"></div>
+                  <span class="service-hor-badge"><i class="ri-tools-fill"></i> 15,000 PSI / API 527 &amp; 598</span>
+                  <span class="service-hor-num">04</span>
+                </div>
+                <div class="service-hor-body">
+                  <div class="service-hor-meta">
+                    <div class="service-hor-icon"><i class="ri-sound-module-line"></i></div>
+                    <span class="service-hor-category">BẢO DƯỠNG &amp; THỬ ÁP LỰC VAN</span>
+                  </div>
+                  <h3 class="service-hor-title" data-i18n="services.s4.title">Bảo dưỡng, sửa chữa và thử nghiệm các loại van</h3>
+                  <p class="service-hor-desc" data-i18n="services.s4.desc">
+                    Bảo dưỡng, rà mài mặt bích, phục hồi làm kín, hiệu chuẩn và thử nghiệm áp lực van an toàn (PSV), van điều khiển (Control Valve), van đóng ngắt đến 15,000 PSI theo chuẩn API 527/598.
+                  </p>
+                  <ul class="service-hor-highlights">
+                    <li><i class="ri-checkbox-circle-fill"></i> Băng thử áp lực thủy tĩnh cao áp hiện đại đến 15,000 PSI</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Kiểm tra rò rỉ rãnh khí (Seat Leakage) theo nghiêm ngặt API 527 / FCI 70-2</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Phục hồi gia công cơ khí, rà phẳng bề mặt đĩa van &amp; seat chuyên dụng</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Hiệu chuẩn bộ định vị thông minh Smart Positioner (Fisher, Masoneilan, Samson)</li>
+                  </ul>
+                  <div class="service-hor-footer">
+                    <a href="dich-vu.html#dich-vu-4" class="service-hor-btn">
+                      <span data-i18n="services.link">Chi tiết dịch vụ</span> <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="lien-he.html" class="service-hor-btn-outline">
+                      <i class="ri-customer-service-2-line"></i> Tư vấn &amp; Báo giá
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 05 -->
+            <div class="service-hor-item">
+              <div class="service-hor-card">
+                <div class="service-hor-thumb">
+                  <img src="assets/images/banner-2.jpg" alt="Bảo dưỡng, sửa chữa thiết bị và hệ thống cơ khí" class="service-hor-img" />
+                  <div class="service-hor-overlay"></div>
+                  <span class="service-hor-badge"><i class="ri-compass-3-line"></i> Easy-Laser XT / Vibration Analysis</span>
+                  <span class="service-hor-num">05</span>
+                </div>
+                <div class="service-hor-body">
+                  <div class="service-hor-meta">
+                    <div class="service-hor-icon"><i class="ri-tools-fill"></i></div>
+                    <span class="service-hor-category">BẢO DƯỠNG CƠ KHÍ &amp; THIẾT BỊ QUAY</span>
+                  </div>
+                  <h3 class="service-hor-title" data-i18n="services.s5.title">Bảo dưỡng, sửa chữa thiết bị và hệ thống cơ khí</h3>
+                  <p class="service-hor-desc" data-i18n="services.s5.desc">
+                    Cân chỉnh đồng tâm trục laser (Laser Shaft Alignment), phân tích rung động chẩn đoán máy quay, phục hồi động cơ bơm, máy nén khí, turbine công nghiệp.
+                  </p>
+                  <ul class="service-hor-highlights">
+                    <li><i class="ri-checkbox-circle-fill"></i> Cân chỉnh đồng tâm trục chính xác micron bằng Laser Easy-Laser XT Thụy Điển</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Phân tích phổ rung động máy quay chẩn đoán sớm hỏng hóc bạc đạn &amp; bánh răng</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Đại tu, bảo dưỡng định kỳ các dòng máy nén khí, bơm ly tâm, turbine</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Phun phủ kim loại phục hồi trục &amp; chống ăn mòn bề mặt tải trọng lớn</li>
+                  </ul>
+                  <div class="service-hor-footer">
+                    <a href="dich-vu.html#dich-vu-5" class="service-hor-btn">
+                      <span data-i18n="services.link">Chi tiết dịch vụ</span> <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="lien-he.html" class="service-hor-btn-outline">
+                      <i class="ri-customer-service-2-line"></i> Tư vấn &amp; Báo giá
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 06 -->
+            <div class="service-hor-item">
+              <div class="service-hor-card">
+                <div class="service-hor-thumb">
+                  <img src="assets/images/DQKX6767-534x400.jpg" alt="Bảo dưỡng, sửa chữa, nâng cấp hệ thống điện & tự động" class="service-hor-img" />
+                  <div class="service-hor-overlay"></div>
+                  <span class="service-hor-badge"><i class="ri-flashlight-line"></i> PLC / SCADA / DCS Automation</span>
+                  <span class="service-hor-num">06</span>
+                </div>
+                <div class="service-hor-body">
+                  <div class="service-hor-meta">
+                    <div class="service-hor-icon"><i class="ri-flashlight-line"></i></div>
+                    <span class="service-hor-category">TỰ ĐỘNG HÓA &amp; ĐIỆN CÔNG NGHIỆP</span>
+                  </div>
+                  <h3 class="service-hor-title" data-i18n="services.s6.title">Bảo dưỡng, sửa chữa, nâng cấp hệ thống điện &amp; tự động</h3>
+                  <p class="service-hor-desc" data-i18n="services.s6.desc">
+                    Đại tu tủ máy cắt trung hạ thế, thí nghiệm rơ le bảo vệ, nâng cấp lập trình PLC/SCADA/DCS và bảo trì định kỳ hệ thống điện động lực nhà máy.
+                  </p>
+                  <ul class="service-hor-highlights">
+                    <li><i class="ri-checkbox-circle-fill"></i> Kiểm tra &amp; thử nghiệm cao áp tủ máy cắt VCB, ACB, GIS trung - hạ thế</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Thí nghiệm rơ le bảo vệ kỹ thuật số bằng hợp bộ Omicron / Megger chuẩn xác</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Nâng cấp lập trình hệ PLC Siemens S7-1500, Allen-Bradley, Yokogawa</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Bảo dưỡng định kỳ hệ thống UPS công nghiệp, biến tần VFD công suất lớn</li>
+                  </ul>
+                  <div class="service-hor-footer">
+                    <a href="dich-vu.html#dich-vu-6" class="service-hor-btn">
+                      <span data-i18n="services.link">Chi tiết dịch vụ</span> <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="lien-he.html" class="service-hor-btn-outline">
+                      <i class="ri-customer-service-2-line"></i> Tư vấn &amp; Báo giá
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 07 -->
+            <div class="service-hor-item">
+              <div class="service-hor-card">
+                <div class="service-hor-thumb">
+                  <img src="assets/images/z5901330745396_fdda2825a45ea5187fc33d7c6ef40b78-628x400.jpg" alt="Thương mại và cho thuê thiết bị kỹ thuật" class="service-hor-img" />
+                  <div class="service-hor-overlay"></div>
+                  <span class="service-hor-badge"><i class="ri-exchange-box-line"></i> Fluke &amp; Beamex &amp; Druck Standard</span>
+                  <span class="service-hor-num">07</span>
+                </div>
+                <div class="service-hor-body">
+                  <div class="service-hor-meta">
+                    <div class="service-hor-icon"><i class="ri-exchange-box-line"></i></div>
+                    <span class="service-hor-category">THƯƠNG MẠI &amp; CHO THUÊ THIẾT BỊ ĐO LƯỜNG</span>
+                  </div>
+                  <h3 class="service-hor-title" data-i18n="services.s7.title">Thương mại và cho thuê thiết bị kỹ thuật</h3>
+                  <p class="service-hor-desc" data-i18n="services.s7.desc">
+                    Cung cấp phụ tùng thay thế chính hãng ngành điện - đo lường - van; cho thuê máy chuẩn hiệu chuẩn áp suất (Fluke, Beamex, Druck), máy nén khí cao áp, máy phát thử tải.
+                  </p>
+                  <ul class="service-hor-highlights">
+                    <li><i class="ri-checkbox-circle-fill"></i> Cho thuê máy hiệu chuẩn đa năng Beamex MC6, Fluke 754, Druck DPI 620G</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Bơm tạo áp lực thủy tĩnh cao cấp tới 15,000 PSI kèm chứng chỉ kiểm định</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Cung cấp phụ tùng van, gasket, cảm biến đo lường chính hãng</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Hỗ trợ kỹ thuật viên hướng dẫn vận hành &amp; bàn giao tận nơi tại nhà máy</li>
+                  </ul>
+                  <div class="service-hor-footer">
+                    <a href="dich-vu.html#dich-vu-7" class="service-hor-btn">
+                      <span data-i18n="services.link">Chi tiết dịch vụ</span> <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="lien-he.html" class="service-hor-btn-outline">
+                      <i class="ri-customer-service-2-line"></i> Tư vấn &amp; Báo giá
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Section Năng Lực & Chứng Nhận Thực Tế từ GDC (Bổ sung hình ảnh công nghệ cao & hiệu ứng bay vào) -->
+      <section class="section cap-fly-section">
+        <div class="container-wide">
+          <div class="section-header">
+            <span class="section-subtitle">NĂNG LỰC ĐƯỢC CÔNG NHẬN</span>
+            <h2 class="section-title">HỒ SƠ NĂNG LỰC &amp; CHỨNG NHẬN QUỐC TẾ</h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="cap-fly-cluster" id="capabilities-fly-cluster">
+            <!-- Official Accreditation Banner Image from GDC -->
+            <div class="cap-fly-banner" style="text-align: center; margin-bottom: 40px; background: #ffffff; padding: 20px; border-radius: 8px; border: 1px solid var(--vnit-border); box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
+              <img src="assets/images/LOGO-ILAC-VILAS-ISO-17025-ISO-9001-2015-VNIT-01-800x202.png" alt="Chứng nhận VILAS ISO 17025 ISO 9001 VNIT" style="max-width: 100%; height: auto; max-height: 110px; object-fit: contain;" />
+            </div>
+
+            <div class="row" style="display: flex; flex-wrap: wrap; margin: -15px;">
+              <!-- Cột 1: Chứng nhận -->
+              <div class="col-lg-3 col-md-6 cap-fly-item" style="flex: 0 0 25%; max-width: 25%; padding: 15px; box-sizing: border-box;">
+                <div class="cap-box modern-tech-cap">
+                  <div class="cap-thumb-wrap">
+                    <img src="assets/images/CHUNG-CHI-CONG-NHAN-CALTEST-568x800.jpg" alt="Chứng chỉ công nhận VILAS 1288" class="cap-thumb-img" />
+                    <div class="cap-thumb-overlay"></div>
+                    <span class="cap-tech-badge"><i class="ri-award-fill"></i> ISO/IEC 17025</span>
+                    <div class="cap-icon-float"><i class="ri-award-line"></i></div>
+                  </div>
+                  <div class="cap-body-wrap">
+                    <h3 class="cap-title">Chứng nhận</h3>
+                    <ul class="cap-list">
+                      <li><i class="ri-checkbox-circle-fill"></i> VILAS 1288 (ISO 17025)</li>
+                      <li><i class="ri-checkbox-circle-fill"></i> Giấy phép ĐK 426 BKHCN</li>
+                      <li><i class="ri-checkbox-circle-fill"></i> ISO 9001:2015 ISOCERT</li>
+                      <li><i class="ri-checkbox-circle-fill"></i> ILAC-MRA Công nhận quốc tế</li>
+                      <li><i class="ri-checkbox-circle-fill"></i> API 527 &amp; API 598</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cột 2: Nhân lực -->
+              <div class="col-lg-3 col-md-6 cap-fly-item" style="flex: 0 0 25%; max-width: 25%; padding: 15px; box-sizing: border-box;">
+                <div class="cap-box modern-tech-cap">
+                  <div class="cap-thumb-wrap">
+                    <img src="assets/images/z6619494244288_60bd73247c224df8c533f89cdab91f1d-copy-300x400.jpg" alt="Đội ngũ kỹ sư VNIT hiện trường" class="cap-thumb-img" />
+                    <div class="cap-thumb-overlay"></div>
+                    <span class="cap-tech-badge"><i class="ri-user-star-fill"></i> BOSIET &amp; ASNT</span>
+                    <div class="cap-icon-float"><i class="ri-team-line"></i></div>
+                  </div>
+                  <div class="cap-body-wrap">
+                    <h3 class="cap-title">Nhân lực</h3>
+                    <ul class="cap-list">
+                      <li><i class="ri-checkbox-circle-fill"></i> Kỹ sư chính quy Bách Khoa/Dầu Khí</li>
+                      <li><i class="ri-checkbox-circle-fill"></i> Kỹ sư ASNT Level II/III</li>
+                      <li><i class="ri-checkbox-circle-fill"></i> Chứng chỉ CompEx Điện khí</li>
+                      <li><i class="ri-checkbox-circle-fill"></i> Chứng chỉ An toàn BOSIET</li>
+                      <li><i class="ri-checkbox-circle-fill"></i> Đào tạo định kỳ chuyên sâu</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cột 3: Trang thiết bị -->
+              <div class="col-lg-3 col-md-6 cap-fly-item" style="flex: 0 0 25%; max-width: 25%; padding: 15px; box-sizing: border-box;">
+                <div class="cap-box modern-tech-cap">
+                  <div class="cap-thumb-wrap">
+                    <img src="assets/images/IMG_5460-300x400.jpg" alt="Trang thiết bị chuẩn đo lường VNIT" class="cap-thumb-img" />
+                    <div class="cap-thumb-overlay"></div>
+                    <span class="cap-tech-badge"><i class="ri-dashboard-fill"></i> Beamex &amp; Druck</span>
+                    <div class="cap-icon-float"><i class="ri-tools-line"></i></div>
+                  </div>
+                  <div class="cap-body-wrap">
+                    <h3 class="cap-title">Trang thiết bị</h3>
+                    <ul class="cap-list">
+                      <li><i class="ri-checkbox-circle-fill"></i> Máy chuẩn Beamex MC6</li>
+                      <li><i class="ri-checkbox-circle-fill"></i> Máy tạo áp Druck 15,000 PSI</li>
+                      <li><i class="ri-checkbox-circle-fill"></i> Lò nhiệt khô Fluke 9144</li>
+                      <li><i class="ri-checkbox-circle-fill"></i> Trạm thử nghiệm van API</li>
+                      <li><i class="ri-checkbox-circle-fill"></i> Cân chỉnh laser Easy-Laser</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cột 4: Cơ sở hạ tầng -->
+              <div class="col-lg-3 col-md-6 cap-fly-item" style="flex: 0 0 25%; max-width: 25%; padding: 15px; box-sizing: border-box;">
+                <div class="cap-box modern-tech-cap">
+                  <div class="cap-thumb-wrap">
+                    <img src="assets/images/banner-1.jpg" alt="Cơ sở hạ tầng và xưởng van VNIT" class="cap-thumb-img" />
+                    <div class="cap-thumb-overlay"></div>
+                    <span class="cap-tech-badge"><i class="ri-building-4-fill"></i> VILAS Lab &amp; Xưởng Van</span>
+                    <div class="cap-icon-float"><i class="ri-building-line"></i></div>
+                  </div>
+                  <div class="cap-body-wrap">
+                    <h3 class="cap-title">Cơ sở hạ tầng</h3>
+                    <ul class="cap-list">
+                      <li><i class="ri-checkbox-circle-fill"></i> Trụ sở: Đô thị Chí Linh, Vũng Tàu</li>
+                      <li><i class="ri-checkbox-circle-fill"></i> Lab VILAS: 35 đường 30/4, P.9</li>
+                      <li><i class="ri-checkbox-circle-fill"></i> Xưởng cơ khí van KCN Đông Xuyên</li>
+                      <li><i class="ri-checkbox-circle-fill"></i> Chi nhánh TP. Hồ Chí Minh</li>
+                      <li><i class="ri-checkbox-circle-fill"></i> Xe hiệu chuẩn lưu động</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 35px;">
+            <a href="nang-luc.html" class="btn-vnit btn-vnit-primary">
+              Xem Chi tiết Chứng nhận &amp; Hồ sơ Năng lực <img src="assets/images/arrow-button.png" class="btn-arrow-icon" alt="" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Section Dự án tiêu biểu -->
+      <section class="section section-bg-light">
+        <div class="container-wide">
+          <div class="section-header">
+            <span class="section-subtitle">DỰ ÁN ĐÃ THỰC HIỆN</span>
+            <h2 class="section-title">DỰ ÁN TIÊU BIỂU</h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="row" style="display: flex; flex-wrap: wrap; margin: -15px;">
+            <!-- Project 1: Recertification & Maintenance Safety Equipment - PVN Blocks 01&02 -->
+            <div class="col-lg-4 col-md-6" style="flex: 0 0 33.333%; max-width: 33.333%; padding: 15px; box-sizing: border-box;">
+              <div class="project-card">
+                <div class="project-thumb">
+                  <span class="project-badge">Dầu khí ngoài khơi</span>
+                  <img src="assets/images/IMG_1052-411x400.jpg" alt="Recertification & Maintenance Safety Equipment – PVN Blocks 01&02" />
+                </div>
+                <div class="project-body">
+                  <h3 class="project-title">Kiểm định &amp; Bảo dưỡng Thiết bị An toàn – Lô 01&amp;02 PVN</h3>
+                  <ul class="project-meta">
+                    <li><strong>Khách hàng:</strong> Petrovietnam (PVN) / Lô 01&amp;02</li>
+                    <li><strong>Địa điểm:</strong> Mỏ Lô 01&amp;02 ngoài khơi Việt Nam</li>
+                    <li><strong>Phạm vi:</strong> Tái kiểm định, hiệu chuẩn van PSV, thiết bị đo lường &amp; an toàn phòng nổ giàn khai thác.</li>
+                  </ul>
+                  <a href="du-an.html#pvn-0102" class="btn-vnit btn-vnit-outline" style="width: 100%; margin-top: auto;">
+                    Xem chi tiết <img src="assets/images/arrow-button.png" class="btn-arrow-icon" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2: Inspection & Testing Pressurized Cylinder - Thang Long JOC -->
+            <div class="col-lg-4 col-md-6" style="flex: 0 0 33.333%; max-width: 33.333%; padding: 15px; box-sizing: border-box;">
+              <div class="project-card">
+                <div class="project-thumb">
+                  <span class="project-badge">Thử nghiệm Áp lực</span>
+                  <img src="assets/images/IMG_6701-300x400.jpg" alt="Inspection & testing Pressurized Cylinder – Thăng Long JOC" />
+                </div>
+                <div class="project-body">
+                  <h3 class="project-title">Kiểm định &amp; Thử nghiệm Bình Áp lực – Thăng Long JOC</h3>
+                  <ul class="project-meta">
+                    <li><strong>Khách hàng:</strong> Thăng Long JOC</li>
+                    <li><strong>Địa điểm:</strong> Giàn Hải Sư Đen / Hải Sư Trắng, Bể Cửu Long</li>
+                    <li><strong>Phạm vi:</strong> Kiểm tra không phá hủy NDT, đo độ dày, thử áp lực thủy tĩnh và cấp chứng chỉ an toàn bình chịu áp lực.</li>
+                  </ul>
+                  <a href="du-an.html#thanglong-joc" class="btn-vnit btn-vnit-outline" style="width: 100%; margin-top: auto;">
+                    Xem chi tiết <img src="assets/images/arrow-button.png" class="btn-arrow-icon" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3: Calibration & Repair PSV - PVN Blocks 01&02 -->
+            <div class="col-lg-4 col-md-6" style="flex: 0 0 33.333%; max-width: 33.333%; padding: 15px; box-sizing: border-box;">
+              <div class="project-card">
+                <div class="project-thumb">
+                  <span class="project-badge">Dịch vụ Van &amp; Áp lực</span>
+                  <img src="assets/images/z5734006150820_779fb6aa77bf5a84fbbd12074e9febae-534x400.jpg" alt="Calibration & Repair PSV – PVN Blocks 01&02" />
+                </div>
+                <div class="project-body">
+                  <h3 class="project-title">Hiệu chuẩn &amp; Sửa chữa Van An toàn (PSV) – Lô 01&amp;02</h3>
+                  <ul class="project-meta">
+                    <li><strong>Khách hàng:</strong> Petrovietnam (PVN) / Lô 01&amp;02</li>
+                    <li><strong>Địa điểm:</strong> Xưởng Thử nghiệm VNIT &amp; Ngoài khơi</li>
+                    <li><strong>Phạm vi:</strong> Tháo rã, rà mài làm kín, thay phụ tùng seal kit, thử áp lực nổ và kẹp chì kiểm định theo tiêu chuẩn API 527.</li>
+                  </ul>
+                  <a href="du-an.html#psv-repair" class="btn-vnit btn-vnit-outline" style="width: 100%; margin-top: auto;">
+                    Xem chi tiết <img src="assets/images/arrow-button.png" class="btn-arrow-icon" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Section Khách hàng & Đối tác Thực tế từ GDC -->
+      <section class="section partner-fly-section" style="overflow: hidden;">
+        <div class="container-wide">
+          <div class="section-header">
+            <span class="section-subtitle">ĐỒNG HÀNH BỀN VỮNG</span>
+            <h2 class="section-title">KHÁCH HÀNG &amp; ĐỐI TÁC CHIẾN LƯỢC</h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <!-- Real Partner Logos from GDC (Hiệu ứng bay vào từ xung quanh) -->
+          <div class="partner-fly-cluster" id="partner-logos-cluster" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 25px; padding: 20px 0;">
+            <div class="partner-fly-item partner-fly-1" style="background: #ffffff; border: 1px solid var(--vnit-border); border-radius: 6px; padding: 12px 20px; display: flex; align-items: center; justify-content: center; min-width: 130px; height: 65px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+              <img src="assets/images/TLJOC_Logo.jpg" alt="Thang Long JOC" style="max-height: 45px; max-width: 110px; object-fit: contain;" />
+            </div>
+            <div class="partner-fly-item partner-fly-2" style="background: #ffffff; border: 1px solid var(--vnit-border); border-radius: 6px; padding: 12px 20px; display: flex; align-items: center; justify-content: center; min-width: 130px; height: 65px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+              <img src="assets/images/pv-gas.png" alt="PV GAS" style="max-height: 45px; max-width: 110px; object-fit: contain;" />
+            </div>
+            <div class="partner-fly-item partner-fly-3" style="background: #ffffff; border: 1px solid var(--vnit-border); border-radius: 6px; padding: 12px 20px; display: flex; align-items: center; justify-content: center; min-width: 130px; height: 65px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+              <img src="assets/images/pvep.png" alt="PVEP" style="max-height: 45px; max-width: 110px; object-fit: contain;" />
+            </div>
+            <div class="partner-fly-item partner-fly-4" style="background: #ffffff; border: 1px solid var(--vnit-border); border-radius: 6px; padding: 12px 20px; display: flex; align-items: center; justify-content: center; min-width: 130px; height: 65px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+              <img src="assets/images/pv-oil.png" alt="PV OIL" style="max-height: 45px; max-width: 110px; object-fit: contain;" />
+            </div>
+            <div class="partner-fly-item partner-fly-5" style="background: #ffffff; border: 1px solid var(--vnit-border); border-radius: 6px; padding: 12px 20px; display: flex; align-items: center; justify-content: center; min-width: 130px; height: 65px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+              <img src="assets/images/vsp.jpg" alt="Vietsovpetro" style="max-height: 45px; max-width: 110px; object-fit: contain;" />
+            </div>
+            <div class="partner-fly-item partner-fly-6" style="background: #ffffff; border: 1px solid var(--vnit-border); border-radius: 6px; padding: 12px 20px; display: flex; align-items: center; justify-content: center; min-width: 130px; height: 65px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+              <img src="assets/images/halliburton.png" alt="Halliburton" style="max-height: 35px; max-width: 120px; object-fit: contain;" />
+            </div>
+            <div class="partner-fly-item partner-fly-7" style="background: #ffffff; border: 1px solid var(--vnit-border); border-radius: 6px; padding: 12px 20px; display: flex; align-items: center; justify-content: center; min-width: 130px; height: 65px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+              <img src="assets/images/Schlumberger_Logo.jpg" alt="Schlumberger" style="max-height: 35px; max-width: 120px; object-fit: contain;" />
+            </div>
+            <div class="partner-fly-item partner-fly-8" style="background: #ffffff; border: 1px solid var(--vnit-border); border-radius: 6px; padding: 12px 20px; display: flex; align-items: center; justify-content: center; min-width: 130px; height: 65px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+              <img src="assets/images/alpha-logo.jpg" alt="Alpha ECC" style="max-height: 45px; max-width: 110px; object-fit: contain;" />
+            </div>
+            <div class="partner-fly-item partner-fly-9" style="background: #ffffff; border: 1px solid var(--vnit-border); border-radius: 6px; padding: 12px 20px; display: flex; align-items: center; justify-content: center; min-width: 130px; height: 65px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+              <img src="assets/images/LOGO-dongyang.jpg" alt="DongYang" style="max-height: 45px; max-width: 110px; object-fit: contain;" />
+            </div>
+            <div class="partner-fly-item partner-fly-10" style="background: #ffffff; border: 1px solid var(--vnit-border); border-radius: 6px; padding: 12px 20px; display: flex; align-items: center; justify-content: center; min-width: 130px; height: 65px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+              <img src="assets/images/tpsk.jpg" alt="TPSK" style="max-height: 45px; max-width: 110px; object-fit: contain;" />
+            </div>
+            <div class="partner-fly-item partner-fly-11" style="background: #ffffff; border: 1px solid var(--vnit-border); border-radius: 6px; padding: 12px 20px; display: flex; align-items: center; justify-content: center; min-width: 130px; height: 65px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+              <img src="assets/images/cng.jpg" alt="CNG Vietnam" style="max-height: 45px; max-width: 110px; object-fit: contain;" />
+            </div>
+            <div class="partner-fly-item partner-fly-12" style="background: #ffffff; border: 1px solid var(--vnit-border); border-radius: 6px; padding: 12px 20px; display: flex; align-items: center; justify-content: center; min-width: 130px; height: 65px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+              <img src="assets/images/agc.png" alt="AGC Chemicals" style="max-height: 40px; max-width: 110px; object-fit: contain;" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. Section Tin tức Mới nhất -->
+      <section class="section section-bg-light">
+        <div class="container-wide">
+          <div class="section-header">
+            <span class="section-subtitle">TIN TỨC HOẠT ĐỘNG</span>
+            <h2 class="section-title">TIN TỨC &amp; SỰ KIỆN KỸ THUẬT VNIT</h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="row" style="display: flex; flex-wrap: wrap; margin: -15px;">
+            <div class="col-lg-4 col-md-6" style="flex: 0 0 33.333%; max-width: 33.333%; padding: 15px; box-sizing: border-box;">
+              <div class="project-card" style="background: #fff;">
+                <div class="project-thumb" style="height: 190px;">
+                  <img src="assets/images/DQKX6767-534x400.jpg" alt="Tin tức VNIT" />
+                </div>
+                <div class="project-body">
+                  <span style="font-size: 12px; color: var(--vnit-accent); font-weight: 700; text-transform: uppercase;">15/10/2026 - Tin Hoạt Động</span>
+                  <h4 style="font-size: 16px; font-weight: 700; color: var(--vnit-primary); margin: 8px 0; line-height: 1.4;">
+                    Bộ Khoa Học và Công Nghệ cấp lại GCN Đăng Ký Cung Cấp Dịch Vụ Kiểm Định Số ĐK 426
+                  </h4>
+                  <p style="font-size: 13.5px; color: var(--vnit-text-muted); line-height: 1.5; margin-bottom: 15px;">
+                    Quyết định số 53/GCN-BKHCN khẳng định năng lực pháp lý và kỹ thuật cao của VNIT trong hoạt động đo lường chuẩn quốc gia.
+                  </p>
+                  <a href="tin-tuc.html" style="color: var(--vnit-accent); font-weight: 700; font-size: 13px; text-decoration: none;">
+                    Đọc tiếp <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" style="flex: 0 0 33.333%; max-width: 33.333%; padding: 15px; box-sizing: border-box;">
+              <div class="project-card" style="background: #fff;">
+                <div class="project-thumb" style="height: 190px;">
+                  <img src="assets/images/IMG_5460-300x400.jpg" alt="Tin tức VNIT" />
+                </div>
+                <div class="project-body">
+                  <span style="font-size: 12px; color: var(--vnit-accent); font-weight: 700; text-transform: uppercase;">02/10/2026 - Kỹ Thuật</span>
+                  <h4 style="font-size: 16px; font-weight: 700; color: var(--vnit-primary); margin: 8px 0; line-height: 1.4;">
+                    Duy trì và Mở Rộng Hệ Thống Chất Lượng VILAS 1288 Theo Tiêu Chuẩn ISO/IEC 17025
+                  </h4>
+                  <p style="font-size: 13.5px; color: var(--vnit-text-muted); line-height: 1.5; margin-bottom: 15px;">
+                    Văn phòng Công nhận Chất lượng (BoA) đánh giá định kỳ và tái công nhận phòng thí nghiệm hiệu chuẩn đo lường của VNIT.
+                  </p>
+                  <a href="tin-tuc.html" style="color: var(--vnit-accent); font-weight: 700; font-size: 13px; text-decoration: none;">
+                    Đọc tiếp <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" style="flex: 0 0 33.333%; max-width: 33.333%; padding: 15px; box-sizing: border-box;">
+              <div class="project-card" style="background: #fff;">
+                <div class="project-thumb" style="height: 190px;">
+                  <img src="assets/images/IMG_5484-533x400.jpg" alt="Tin tức VNIT" />
+                </div>
+                <div class="project-body">
+                  <span style="font-size: 12px; color: var(--vnit-accent); font-weight: 700; text-transform: uppercase;">20/09/2026 - Dự Án</span>
+                  <h4 style="font-size: 16px; font-weight: 700; color: var(--vnit-primary); margin: 8px 0; line-height: 1.4;">
+                    Hoàn Thành Đợt Bảo Dưỡng Thử Nghiệm Van An Toàn Cho Các Giàn Khai Thác Ngoài Khơi
+                  </h4>
+                  <p style="font-size: 13.5px; color: var(--vnit-text-muted); line-height: 1.5; margin-bottom: 15px;">
+                    Đảm bảo độ kín tuyệt đối theo tiêu chuẩn API 527 và chuẩn bị sẵn sàng cho kế hoạch bảo dưỡng định kỳ các giàn khoan.
+                  </p>
+                  <a href="tin-tuc.html" style="color: var(--vnit-accent); font-weight: 700; font-size: 13px; text-decoration: none;">
+                    Đọc tiếp <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== FOOTER (Chính xác 100% dữ liệu GDC) ==================== -->
+    <footer>
+      <div class="top-wrap">
+        <div class="container-wide">
+          <div class="row" style="display: flex; flex-wrap: wrap; margin: -15px;">
+            <!-- Cột 1: Thông tin VNIT -->
+            <div class="col-lg-4 col-md-6" style="flex: 0 0 33.333%; max-width: 33.333%; padding: 15px; box-sizing: border-box;">
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                <img src="assets/images/logo-VNIT-kiem-dinh-viet-nam-01.png" alt="VNIT Logo" style="height: 48px; width: auto;" />
+                <span style="color: #fff; font-weight: 900; font-size: 24px; letter-spacing: 1px;">VNIT</span>
+              </div>
+              <p style="font-weight: 700; color: #ffffff; font-size: 14px; margin-bottom: 10px; line-height: 1.4;" data-i18n="footer.company_name">
+                CÔNG TY TNHH KIỂM ĐỊNH VÀ DỊCH VỤ KỸ THUẬT VIỆT NAM (VNIT)
+              </p>
+              <ul style="list-style: none; padding: 0; margin: 0; font-size: 13.5px; color: #cbd5e0; line-height: 1.8;">
+                <li><i class="ri-map-pin-2-fill" style="color: var(--vnit-accent);"></i> <span data-i18n="footer.address">Lô D6/5, đường Quang Dũng, Trung Tâm Đô Thị Chí Linh, Phường 10, TP. Vũng Tàu</span></li>
+                <li><i class="ri-phone-fill" style="color: var(--vnit-accent);"></i> Tel: 0254.359.6789 | Fax: 0254.359.6789</li>
+                <li><i class="ri-customer-service-2-fill" style="color: var(--vnit-accent);"></i> Hotline: <strong style="color: var(--vnit-accent);">0977.2323.46</strong></li>
+                <li><i class="ri-mail-fill" style="color: var(--vnit-accent);"></i> Email: <a href="mailto:info@cal-test.vn" style="color: #cbd5e0;">info@cal-test.vn</a></li>
+                <li><i class="ri-global-line" style="color: var(--vnit-accent);"></i> Website: cal-test.vn / vnit.com.vn</li>
+              </ul>
+            </div>
+
+            <!-- Cột 2: Liên kết nhanh -->
+            <div class="col-lg-2 col-md-6" style="flex: 0 0 16.666%; max-width: 16.666%; padding: 15px; box-sizing: border-box;">
+              <p class="title-ft" data-i18n="footer.quicklinks">Liên kết nhanh</p>
+              <ul class="menu-list">
+                <li><a href="gioi-thieu.html" data-i18n="nav.about.intro">Giới thiệu chung</a></li>
+                <li><a href="nang-luc.html" data-i18n="nav.capabilities">Hồ sơ năng lực</a></li>
+                <li><a href="dich-vu.html" data-i18n="nav.services">7 Dịch vụ cốt lõi</a></li>
+                <li><a href="du-an.html" data-i18n="nav.proj.featured">Dự án tiêu biểu</a></li>
+                <li><a href="tin-tuc.html" data-i18n="nav.news">Tin tức VNIT</a></li>
+                <li><a href="tuyen-dung.html" data-i18n="nav.careers">Tuyển dụng</a></li>
+                <li><a href="lien-he.html" data-i18n="nav.contact">Liên hệ &amp; Báo giá</a></li>
+              </ul>
+            </div>
+
+            <!-- Cột 3: Dịch vụ cốt lõi -->
+            <div class="col-lg-3 col-md-6" style="flex: 0 0 25%; max-width: 25%; padding: 15px; box-sizing: border-box;">
+              <p class="title-ft" data-i18n="footer.services">Dịch vụ chính</p>
+              <ul class="menu-list">
+                <li><a href="dich-vu.html#dich-vu-1" data-i18n="nav.services.s1">Kiểm định &amp; Hiệu chuẩn</a></li>
+                <li><a href="dich-vu.html#dich-vu-2" data-i18n="nav.services.s2">Thi công E&amp;I &amp; Viễn thông</a></li>
+                <li><a href="dich-vu.html#dich-vu-3" data-i18n="nav.services.s3">Tổng thầu EPC hệ thống điện</a></li>
+                <li><a href="dich-vu.html#dich-vu-4" data-i18n="nav.services.s4">Bảo dưỡng &amp; Thử van</a></li>
+                <li><a href="dich-vu.html#dich-vu-5" data-i18n="nav.services.s5">Bảo dưỡng cơ khí chính xác</a></li>
+                <li><a href="dich-vu.html#dich-vu-7" data-i18n="nav.services.s7">Cho thuê thiết bị đo lường</a></li>
+              </ul>
+            </div>
+
+            <!-- Cột 4: Scan QR Zalo & Đăng ký nhận tin -->
+            <div class="col-lg-3 col-md-6" style="flex: 0 0 25%; max-width: 25%; padding: 15px; box-sizing: border-box;">
+              <p class="title-ft" data-i18n="footer.zalo_title">Kết nối Zalo Kỹ thuật</p>
+              <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 15px;">
+                <img src="assets/images/qr-zalo-01-400x400.png" alt="Scan QR Zalo VNIT" style="width: 85px; height: 85px; background: #fff; padding: 4px; border-radius: 4px;" />
+                <div style="font-size: 13px; color: #cbd5e0; line-height: 1.5;" data-i18n="footer.zalo_desc">
+                  Quét mã QR Zalo để liên hệ trực tiếp với kỹ sư trực 24/7.
+                </div>
+              </div>
+              <p class="title-ft" style="margin-top: 15px;" data-i18n="footer.newsletter_title">Đăng ký nhận tin</p>
+              <form data-vnit-form="newsletter" class="subscribe-form">
+                <input type="email" required placeholder="Địa chỉ email..." data-i18n-placeholder="footer.newsletter_placeholder" />
+                <button type="submit" data-i18n="footer.send_btn">Gửi</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom info bar -->
+      <div class="bottom-wrap" style="background: #04101e; border-top: 1px solid rgba(255,255,255,0.06);">
+        <div class="container-wide">
+          <div class="bottom-info">
+            <div>
+              <span data-i18n="footer.license">CÔNG TY TNHH KIỂM ĐỊNH VÀ DỊCH VỤ KỸ THUẬT VIỆT NAM (VNIT) | GCN ĐKKD: 3502379813</span>
+            </div>
+            <div>
+              <p style="margin: 0;" data-i18n="footer.copyright">Copyright 2026 &copy; VNIT - cal-test.vn. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="assets/js/vnit-i18n.js"></script>
+  <script src="assets/js/vnit-main.js"></script>
+  <script src="assets/js/vnit-animations.js" defer></script>
+  <!-- CMS Live Realtime Sync & Click-to-Edit Visual Engine -->
+  <script src="assets/js/firebase-sync.js"></script>
+  <script src="assets/js/cms-editor.js"></script>
+</body>
+</html>

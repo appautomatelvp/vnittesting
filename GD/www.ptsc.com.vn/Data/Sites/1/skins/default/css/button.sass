@@ -1,0 +1,121 @@
+.button
+	.btn 
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		font-size: 14px
+		position: relative
+		overflow: hidden
+		height: 40px
+		min-width: 150px
+		font-size: 14px
+		line-height: 1
+		padding-right: 15px
+		padding-left: 15px
+		text-transform: uppercase
+		span 
+			position: relative
+			z-index: 2
+		.animate
+			position: absolute
+			display: block
+			border-radius: 50%
+			background-color: $white
+			transition: width 0.4s ease-in-out, height 0.4s ease-in-out
+			transform: translate(-50%, -50%)
+			z-index: 1
+			width: 0
+			height: 0
+		img
+			margin-left: 15px
+			position: relative
+			z-index: 11
+			width: 12px
+			height: 12px
+		&:hover
+			color: $main
+			span
+				background-size: 0 0 !important
+			.animate
+				width: 225%
+				height: 382.5px
+		&:active 
+			.animate
+				background-color: rgba($white, 0.75)
+		&.btn-blue
+			background: $blue
+			color: $white
+			border: thin solid $blue
+			&:hover
+				color: $main
+				border-color: $main
+				background: $white
+			&.no-bg
+				background: transparent
+				color: $blue
+		&.btn-main
+			background: $white
+			color: $main
+			border: thin solid $main
+			&:hover
+				color: $white
+				border-color: $main
+				background: $main
+			&.no-bg
+				background: transparent
+				color: $blue
+				&:hover 
+					span 
+						color: white 
+			.animate
+				background: $main
+			&.bg-main
+				background: $main
+				color: $white
+				.animate
+					background: $white
+				&:hover
+					color: $main
+			&.no-border
+				border-color: transparent
+				padding-left: 0
+				padding-right: 0
+		&.btn-white
+			background: $white
+			color: $white
+			border: thin solid $white
+			&:hover
+				color: $main
+				border-color: $main
+			&.no-bg
+				background: transparent
+				color: $white
+				border: none
+				&:hover
+					color: $main
+			&.no-background
+				background: transparent
+		&.btn-67
+			background: $color-67
+			color: $white
+			border: thin solid $color-67
+			&:hover
+				color: $main
+				border-color: $main
+		&.btn-cc
+			background: $color-cc
+			color: $white
+			border: thin solid $color-cc
+			&:hover
+				color: $main
+				border-color: $main
+		&.btn-light-blue
+			background: $light-blue
+			color: $white
+			border: thin solid $light-blue
+			&:hover
+				color: $light-blue
+				border-color: $light-blue
+	@media(min-width: 1280px)
+		.btn 
+			height: 50px

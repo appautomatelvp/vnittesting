@@ -1,0 +1,23 @@
+{
+  "name": "vnit-website",
+  "version": "1.0.0",
+  "description": "Website Công ty Cổ phần Kỹ thuật & Kiểm định VNIT",
+  "main": "server.js",
+  "scripts": {
+    "build": "node build.js",
+    "start": "node server.js",
+    "dev": "node dev.js",
+    "dev:web": "node server.js",
+    "dev:admin": "npm --prefix admin run dev",
+    "build:admin": "npm --prefix admin run build"
+  },
+  "keywords": [
+    "vnit",
+    "engineering",
+    "inspection",
+    "calibration",
+    "vilas"
+  ],
+  "author": "VNIT",
+  "license": "ISC"
+}

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <linearGradient id="vnitAccentGradW" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4B4B" />
+      <stop offset="100%" stop-color="#E30613" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Logo Icon: Geometric Industrial Emblem -->
+  <g transform="translate(10, 10)">
+    <polygon points="5,42 22,25 22,12 5,29" fill="url(#vnitAccentGradW)" />
+    <polygon points="18,52 35,35 35,8 18,25" fill="#5BCBF5" />
+    <polygon points="31,52 48,35 48,8 31,25" fill="#FFFFFF" />
+    <circle cx="26.5" cy="30" r="3.5" fill="#213B78" />
+  </g>
+
+  <!-- Typography VNIT -->
+  <text x="75" y="44" font-family="'Exo', 'Montserrat', Arial, sans-serif" font-weight="900" font-size="34" letter-spacing="2" fill="#FFFFFF">
+    VNIT
+  </text>
+  
+  <!-- Slogan / Subtitle -->
+  <text x="76" y="58" font-family="'Exo', 'Roboto', Arial, sans-serif" font-weight="600" font-size="9" letter-spacing="1.5" fill="#5BCBF5">
+    ENGINEERING &amp; INSPECTION
+  </text>
+  <text x="76" y="68" font-family="'Exo', 'Roboto', Arial, sans-serif" font-weight="400" font-size="7.5" letter-spacing="0.5" fill="#E0E6F0">
+    DỊCH VỤ KỸ THUẬT &amp; HIỆU CHUẨN ĐO LƯỜNG
+  </text>
+</svg>

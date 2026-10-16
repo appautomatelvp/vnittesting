@@ -1,0 +1,100 @@
+.project-page
+	main
+		padding-top: 70px
+	@media(min-width: 1280px)
+		main
+			padding-top: 105px
+.project-section
+	&.project-1
+		background-color: #eeeeee
+	&.project-2
+		background-color: #f5f5f5
+		margin-bottom: 5px
+	.swiper
+		padding-bottom: 20px
+	.swiper-scrollbar
+		background: #e5e5e5
+		border-radius: 0
+	.swiper-scrollbar-drag
+		background: $main
+		border-radius: 0
+	.main-button 
+		margin-top: 20px
+		> * 
+			width: 40px
+			height: 40px
+			display: flex
+			justify-content: center
+			align-items: center
+			transition: .2s ease-in-out all
+			background: $main
+			color: $white
+			margin: 0 10px
+			&:hover 
+				background: $light-blue
+	@media(min-width: 1280px)
+		overflow: hidden
+		.main-title-2
+			margin-bottom: 22px
+		.desc-wrap
+			margin-bottom: 30px
+			max-width: 1330px
+		.swiper
+			padding-bottom: 45px
+			overflow: visible
+		.main-button 
+			margin-top: 0
+			> *
+				margin: 0
+				top: 27%
+			.button-prev 
+				left: -15px
+			.button-next 
+				right: -15px
+		.swiper-slide
+			.project-child-item
+				opacity: 0.5
+		.swiper-slide-active, .swiper-slide-next, .swiper-slide-prev
+			.project-child-item
+				opacity: 1
+	@media(min-width: 1440px)
+		padding-top: 95px
+		padding-bottom: 85px
+		.desc-wrap
+			margin-bottom: 55px
+		.main-slide
+			margin-left: -10px
+			margin-right: -10px
+		.main-button 
+			> *
+				width: 50px
+				height: 50px
+	@media(min-width: 1580px)
+		.main-button 
+			.button-prev 
+				left: -80px
+			.button-next 
+				right: -80px
+.project-page
+	@media(min-width: 768px)
+		.content-popup 
+			.mySwiper 
+				.img-scale
+					padding-top: 0
+					height: 100%
+	@media(min-width: 1280px)
+		.fancybox__slide
+			padding: 30px 100px
+		.content-popup 
+			.project-popup-section
+				max-height: calc(100vh - 110px)
+			.mySwiper2 
+				.img-scale
+					padding-top: 0
+					height: calc(100vh - 340px)
+			.content
+				padding-bottom: 0
+			.desc
+				> *
+					&:last-child
+						margin-bottom: 0

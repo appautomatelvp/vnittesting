@@ -1,0 +1,98 @@
+.news-list
+	.main-title
+		margin-bottom: 15px
+	.row
+		margin-top: -30px
+		> *
+			margin-top: 30px
+	.news-card-item 
+		.button 
+			width: 100%
+			.btn 
+				width: 100%
+				min-width: 100%
+				padding-left: 0
+				padding-right: 0
+				display: flex
+				justify-content: space-between
+				text-transform: none
+				height: auto
+	.button
+		margin-top: 30px
+	@media(min-width: 1280px)
+		.main-title
+			margin-bottom: 20px
+.news-list-1
+	.news-card-item
+		+ .news-card-item
+			margin-top: 20px
+	.box-news-top, .box-news-bottom 
+		margin-top: 30px
+	.navbar-category
+		li
+			margin-left: 10px
+			margin-right: 10px
+	@media(min-width: 576px)
+		.box-news-right 
+			background: #f8f8f8
+			padding: 20px
+	@media(min-width: 1280px)
+		.col-xl-8-cus 
+			flex: 0 0 65.9574468085%
+			max-width: 65.9574468085%
+		.col-xl-4-cus 
+			flex: 0 0 34.0425531915%
+			max-width: 34.0425531915%
+		.box-news-right 
+			padding: 30px 30px 35px 30px
+		.box-news-top
+			margin-top: 40px
+		.navbar-category
+			li
+				margin-left: 22px
+				margin-right: 22px
+			&.navbar-category-2
+				a
+					padding-top: 21.5px
+		.box-news-bottom 
+			.news-card-item 
+				.button 
+					.btn
+						font-size: 16px
+				.caption
+					padding: 25px 30px 30px 30px
+				.title
+					line-height: 1.1
+.news-list-2
+	@media(min-width: 576px)
+		.news-card-item
+			&.news-hor
+				.image
+					height: 185px 
+					width: 330px
+				.caption
+					width: calc( 100% - 330px )
+					padding: 20px
+	@media(min-width: 1024px)
+		.news-card-item
+			&.news-hor
+				.title
+					margin-top: 7px
+					line-height: 1.4 !important
+					a
+						font-size: 16px
+						line-height: 1.4 !important
+				.caption
+					display: flex
+					flex-direction: column
+					justify-content: space-between
+					padding: 25px 30px
+				.button 
+					.btn
+						font-size: 16px
+	@media(min-width: 1280px)
+		.news-card-item
+			&:not(.news-hor)
+				.caption
+					height: 195px
+					padding: 25px 30px 30px 30px

@@ -1,0 +1,73 @@
+.recruitment-search
+	background-color: #f8f8f8
+	border-top: thin solid #e1e1e1
+	border-bottom: 2px solid #eb212e
+	.main-title
+		margin-bottom: 30px
+	.search-recruitment
+		display: flex
+		flex-wrap: wrap 
+		> * 
+			width: 100%
+	.form-group 
+		input, select 
+			width: 100%
+			background-color: white
+			font-weight: 300
+			color: #666666
+			+font-1 
+			&:placeholder 
+				color: #666666
+		input
+			color: $main 
+			font-weight: 700
+		&.form-submit
+			button, input
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 100%
+				height: 40px
+				background-color: $light-blue
+				border: thin solid $light-blue
+				padding: 5px 20px
+				color: white 
+				font-size: 14px
+				font-weight: 400
+				text-transform: uppercase
+				span 
+					color: white 
+					font-size: 14px
+					font-weight: 400
+					text-transform: uppercase
+					margin-right: 10px
+	@media(min-width: 768px)
+		.search-recruitment
+			margin-left: -15px
+			margin-right: -15px
+			> * 
+				flex: 1
+				padding-left: 15px
+				padding-right: 15px
+	@media(min-width: 1280px)
+		.search-recruitment
+			transform: translateX(15px)
+			max-width: 945px
+			.form-item
+				&:first-child, &:nth-child(2)
+					flex: 0 0 calc(360 / 945 * 100%)
+					max-width: calc(360 / 945 * 100%)
+				&:last-child
+					flex: 0 0 calc(225 / 945 * 100%)
+					max-width: calc(225 / 945 * 100%)
+		.form-group 
+			&.form-submit
+				button, input 
+					height: 50px
+					&:hover 
+						background-color: $main
+						border-color: $main
+						color: white
+	@media(min-width: 1440px)
+		padding-top: 90px
+		padding-bottom: 50px

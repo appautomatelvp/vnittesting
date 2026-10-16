@@ -1,0 +1,36 @@
+.contact-section
+	.row
+		margin-top: -30px
+		> *
+			margin-top: 30px
+	.img-scale
+		+img-scale(450/930)
+	.desc
+		color: $text-33
+		ul
+			padding-left: 0
+			list-style-type: none 
+		li
+			display: flex
+			+ li
+				margin-top: 15px
+		em
+			font-size: 18px
+			color: $main
+			margin-right: 15px
+	@media(min-width: 1024px)
+		.row
+			flex-direction: row-reverse
+		.box-content
+			padding-top: 40px
+			padding-left: 30px
+		.main-title-2
+			margin-bottom: 20px
+		.desc
+			font-size: 20px
+			em
+				font-size: 22px
+				margin-right: 30px
+	@media(min-width: 1440px)
+		padding-top: 100px
+		padding-bottom: 80px

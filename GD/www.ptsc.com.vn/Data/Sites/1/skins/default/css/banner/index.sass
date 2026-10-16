@@ -1,0 +1,100 @@
+.home-banner
+	position: relative
+	// .swiper-slide
+	// 	background: rgba($main, 0.85)
+	// 	&:not(.swiper-slide-active)
+	// 		.image
+	// 			transform: scale(1.4) rotate(12deg)
+	// 			transition: transform .6s cubic-bezier(.55,.085,.68,.53),opacity .6s cubic-bezier(.55,.085,.68,.53)
+	// 			transition-delay: 0s,.9s
+	// 			opacity: 0
+	// 	&.swiper-slide-active
+	// 		.image
+	// 			transform: scale(1) rotate(0)
+	// 			opacity: 1
+	// 			transition-duration: 1.2s
+	// 			transition-delay: .45s
+	// 			transition-timing-function: cubic-bezier(.23,1,.32,1)
+	.img-scale
+		+img-scale(937/1920)
+	.iframe-scale
+		+iframe-scale(937/1920)
+	.caption
+		position: absolute
+		// top: 50%
+		// left: 50%
+		// transform: translate(-50%, -50%)
+		// transform: translate(-50%, -50%)
+		left: 0
+		bottom: 0
+		width: 100%
+		z-index: 11
+		.sticky
+			padding-top: 10px
+			padding-bottom: 10px
+			background: url(../img/banner/bg-text.png)
+			background-repeat: no-repeat
+			position: sticky
+			z-index: 11
+			bottom: 0
+			background-size: cover
+			background-position-x: right
+			.title-banner
+				padding-right: 35px
+	.main-page 
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 12px
+		position: absolute
+		bottom: 5%
+		left: 50%
+		transform: translateX(-50%)
+		z-index: 11
+	.swiper-pagination
+		display: flex
+		justify-content: center
+		align-items: center
+	.title-banner
+		strong
+			text-transform: none
+	.swiper-pagination-bullet
+		width: 12px
+		height: 12px
+		opacity: 1
+		background: $white
+		margin-left: 5px
+		margin-right: 5px
+		box-shadow: 0 0 10px 1px rgba(0,0,0,0.1)
+		&.swiper-pagination-bullet-active
+			background: $main
+	.desc
+		display: none
+		text-shadow: 1px 0 0 rgba(0,0,0,01)
+	.button
+		margin-top: 10px
+	@media(max-width: 575.89px)
+		.title-banner
+			font-size: 14px
+	@media(min-width: 768px)
+		.desc
+			display: block
+			margin-bottom: 20px
+	@media(min-width: 1280px)
+		// .title-banner
+		// 	margin-bottom: 20px
+		.caption
+			// top: 28%
+			top: auto
+			bottom: 0
+			// transform: translateX(-50%)
+			// height: 100%
+			.sticky
+				padding-top: 26px
+				padding-bottom: 26px
+				background: url(../img/banner/bg-text.png)
+				background-repeat: no-repeat
+				position: sticky
+				z-index: 11
+				bottom: 0
+				background-size: contain

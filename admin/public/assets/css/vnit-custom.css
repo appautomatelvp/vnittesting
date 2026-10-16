@@ -1,0 +1,2989 @@
+/* ==========================================================================
+   VNIT CUSTOM STYLESHEET
+   Industrial Technical Engineering Design System for VNIT
+   ========================================================================== */
+
+@font-face {
+  font-family: "remixicon";
+  src: url("../fonts/remixicon.woff2") format("woff2");
+  font-display: swap;
+}
+
+[class^="ri-"], [class*=" ri-"] {
+  font-family: 'remixicon' !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --vnit-primary: #0066bf; /* GDC Signature Royal Technical Blue */
+  --vnit-primary-dark: #073863; /* GDC Deep Slate Blue */
+  --vnit-secondary: #0088e8; /* Vivid Blue */
+  --vnit-cyan: #00b4d8;
+  --vnit-light-blue: #eef6fd;
+  --vnit-accent: #f99b1c; /* GDC Characteristic Industrial Amber/Orange */
+  --vnit-accent-hover: #e0850b;
+  --vnit-text: #212121;
+  --vnit-text-muted: #555555;
+  --vnit-bg-light: #f7fafc;
+  --vnit-border: #e2e8f0;
+  --vnit-font-main: 'Exo', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--vnit-font-main);
+  color: var(--vnit-text);
+  background-color: #ffffff !important; /* override any test background */
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+header.scrolled {
+  padding: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.header-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 35px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1600px) {
+  .header-wrap {
+    padding: 0 45px;
+  }
+}
+
+.left-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.left-wrap .logo-vn {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.left-wrap .logo-vn img,
+.left-wrap .logo-vn svg {
+  height: 52px;
+  width: auto;
+  max-width: 260px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.left-wrap .logo-vn:hover img,
+.left-wrap .logo-vn:hover svg {
+  transform: scale(1.02);
+}
+
+.right-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex: 1;
+  margin-left: 20px;
+}
+
+/* Top utility bar */
+.top-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 6px 0;
+  font-size: 13px;
+  border-bottom: 1px solid #f0f2f5;
+  width: 100%;
+}
+
+.top-info {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.top-info li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--vnit-text-muted);
+}
+
+.top-info li i,
+.top-info li em {
+  color: var(--vnit-secondary);
+  font-size: 15px;
+}
+
+.top-info li a {
+  color: var(--vnit-text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.top-info li a:hover {
+  color: var(--vnit-primary);
+}
+
+.top-badge {
+  background: var(--vnit-light-blue);
+  color: var(--vnit-primary);
+  font-weight: 600;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Header utility buttons */
+.header-actions {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  gap: 10px;
+}
+
+.lang-switch-box {
+  display: inline-flex;
+  align-items: center;
+  background: #f1f4f8;
+  border: 1px solid #d0dbe7;
+  border-radius: 4px;
+  padding: 2px 4px;
+  gap: 2px;
+}
+
+.lang-btn {
+  border: none;
+  background: transparent;
+  color: #4a5568;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 7px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.lang-btn img.flag-icon {
+  width: 15px;
+  height: 10px;
+  border-radius: 1px;
+  display: block;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.lang-btn:hover {
+  color: var(--vnit-primary);
+  background: rgba(0, 102, 191, 0.08);
+}
+
+.lang-btn.active {
+  background: var(--vnit-primary);
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 102, 191, 0.35);
+}
+
+.lang-btn.active:hover {
+  background: var(--vnit-primary-dark);
+  color: #ffffff;
+}
+
+.lang-sep {
+  color: #cbd5e0;
+  font-size: 11px;
+}
+
+.btn-search-toggle {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background: #f1f4f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--vnit-primary);
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.btn-search-toggle:hover {
+  background: var(--vnit-primary);
+  color: #ffffff;
+}
+
+/* Bottom Nav bar */
+.bottom-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  width: 100%;
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* PTSC-Style Continuous Navbar Base with VNIT Brand Color */
+header .main-menu::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 62px !important;
+  width: 500% !important;
+  background: var(--vnit-primary) !important;
+  transform: skewX(-45deg) !important;
+  -webkit-transform: skewX(-45deg) !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+header .main-menu::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 100% !important;
+  width: 500% !important;
+  background: #ffffff !important;
+  pointer-events: none !important;
+  z-index: 20 !important;
+}
+
+/* Skew background tabs */
+.main-menu > li {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 42px !important;
+  z-index: 2 !important;
+  transition: all 0.2s ease !important;
+}
+
+.main-menu > li::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: var(--vnit-primary) !important;
+  transform: skewX(-45deg) !important;
+  -webkit-transform: skewX(-45deg) !important;
+  z-index: 1 !important;
+  transition: background 0.25s ease !important;
+  pointer-events: none !important;
+}
+
+.main-menu > li:hover::before,
+.main-menu > li.active::before {
+  background: var(--vnit-accent) !important;
+  width: 100% !important;
+}
+
+.main-menu > li > a {
+  position: relative !important;
+  z-index: 10 !important;
+  color: #ffffff !important;
+  font-family: var(--vnit-font-main) !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  padding: 0 16px !important;
+  height: 42px !important;
+  display: flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Authentic PTSC Home Button: Dark Navy Parallelogram with clean 2px diagonal slit */
+.main-menu > li.home-link {
+  width: 60px !important;
+  min-width: 60px !important;
+  max-width: 60px !important;
+  margin-right: 2px !important;
+  padding: 0 !important;
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: visible !important; /* CRITICAL: Never clip parallelogram corners */
+  z-index: 2 !important;
+}
+
+.main-menu > li.home-link::before,
+.main-menu > li.home-link.active::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: var(--vnit-primary) !important; /* Always royal/deep blue matching PTSC Image 2, never cyan or accent */
+  transform: skewX(-45deg) !important;
+  -webkit-transform: skewX(-45deg) !important;
+  z-index: 1 !important;
+  transition: background 0.25s ease !important;
+  pointer-events: none !important;
+}
+
+.main-menu > li.home-link:hover::before {
+  background: var(--vnit-secondary, #0088e8) !important;
+}
+
+.main-menu > li.home-link > a {
+  padding: 0 !important;
+  margin: 0 !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 42px !important;
+  display: flex !important;
+  align-items: center !important;
+  position: relative !important;
+  z-index: 10 !important;
+  overflow: visible !important;
+  font-size: 0 !important; /* Eliminate text node leaks */
+  line-height: 0 !important;
+  text-decoration: none !important;
+}
+
+.main-menu > li.home-link i,
+.main-menu > li.home-link em {
+  font-size: 18px !important;
+  color: #ffffff !important;
+  line-height: 1 !important;
+  display: inline-block !important;
+  position: relative !important;
+  z-index: 11 !important;
+}
+
+/* Ensure next tab (Giới thiệu) has comfortable breathing room from slanted slit */
+.main-menu > li.home-link + li > a {
+  padding-left: 20px !important;
+}
+
+/* ==========================================================================
+   LAST-CHILD TAB (LIÊN HỆ) SYNCHRONIZATION
+   Completely eliminate PTSC cyan (#5bcbf5) leak and unify with VNIT design system
+   ========================================================================== */
+header .main-menu > li:last-child {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+header .main-menu > li:last-child > a {
+  position: relative !important;
+  overflow: hidden !important;
+  z-index: 10 !important;
+  color: #ffffff !important;
+}
+
+header .main-menu > li:last-child::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: var(--vnit-primary) !important;
+  transform: skewX(-45deg) !important;
+  -webkit-transform: skewX(-45deg) !important;
+  z-index: 1 !important;
+  transition: background 0.25s ease !important;
+  pointer-events: none !important;
+}
+
+header .main-menu > li:last-child:hover::before,
+header .main-menu > li:last-child.active::before {
+  background: var(--vnit-accent) !important; /* Uniform Industrial Amber/Orange hover */
+  width: 100% !important;
+  opacity: 1 !important;
+}
+
+/* Fill the bottom-right corner triangle with solid orange so the last tab is 100% unified */
+header .main-menu > li:last-child > a::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: -45px !important;
+  width: 100% !important;
+  height: 100% !important;
+  transform: skewX(-45deg) !important;
+  -webkit-transform: skewX(-45deg) !important;
+  background: var(--vnit-accent) !important; /* Matching VNIT Industrial Orange */
+  opacity: 0 !important;
+  z-index: -1 !important;
+  transition: opacity 0.2s ease-in-out !important;
+  pointer-events: none !important;
+}
+
+header .main-menu > li:last-child:hover > a::after,
+header .main-menu > li:last-child.active > a::after {
+  opacity: 1 !important;
+}
+
+/* Dropdown Menu */
+.main-menu > li.has-mega .mega-arrow {
+  margin-left: 5px;
+  font-size: 14px;
+  transition: transform 0.2s;
+  position: relative;
+  z-index: 12 !important;
+  color: #ffffff;
+}
+
+.main-menu > li.has-mega:hover .mega-arrow {
+  transform: rotate(180deg);
+}
+
+.main-menu .mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 320px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-top: 3px solid var(--vnit-accent);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 100;
+  padding: 8px 0;
+  border-radius: 0 0 6px 6px;
+}
+
+.main-menu > li:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mega-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mega-menu ul li {
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.mega-menu ul li::before {
+  display: none !important;
+}
+
+.mega-menu ul li a {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: var(--vnit-primary);
+  font-size: 13.5px;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid #f0f2f5;
+  transition: all 0.2s ease;
+  line-height: 1.4;
+}
+
+header .main-menu li .mega-menu li.active a,
+header .main-menu li .mega-menu li:hover a,
+.mega-menu ul li.active a,
+.mega-menu ul li a:hover {
+  background: #233a7a !important;
+  color: #ffffff !important;
+  padding-left: 24px;
+  font-weight: 700;
+}
+
+header .main-menu li .mega-menu li.active a i,
+header .main-menu li .mega-menu li:hover a i,
+.mega-menu ul li.active a i,
+.mega-menu ul li a:hover i {
+  color: var(--vnit-accent) !important;
+}
+
+.mega-menu ul li:last-child a {
+  border-bottom: none;
+}
+
+.mega-menu ul li a i {
+  margin-right: 8px;
+  color: var(--vnit-secondary);
+  font-size: 16px;
+}
+
+/* Search bar overlay */
+.search-wrap {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--vnit-primary);
+  padding: 15px 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 99;
+}
+
+.search-wrap.active {
+  display: block;
+}
+
+.search-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 20px;
+}
+
+.search-inner input {
+  width: 100%;
+  padding: 12px 50px 12px 20px;
+  border-radius: 30px;
+  border: none;
+  font-size: 15px;
+  outline: none;
+  font-family: inherit;
+}
+
+.search-inner .btn-submit-search {
+  position: absolute;
+  right: 65px;
+  background: transparent;
+  border: none;
+  color: var(--vnit-primary);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.search-inner .btn-close-search {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+/* Mobile drawer toggler */
+.navbar-toggler {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: var(--vnit-primary);
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+/* Mobile Drawer */
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  left: -320px;
+  width: 300px;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 2000;
+  box-shadow: 4px 0 25px rgba(0, 0, 0, 0.25);
+  transition: left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.mobile-nav-drawer.open {
+  left: 0;
+}
+
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1999;
+  display: none;
+}
+
+.mobile-overlay.open {
+  display: block;
+}
+
+.mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--vnit-border);
+  background: var(--vnit-primary);
+}
+
+.mobile-drawer-header img {
+  height: 40px;
+}
+
+.mobile-drawer-close {
+  color: #ffffff;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav-list li {
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.mobile-nav-list li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  color: var(--vnit-primary);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.mobile-nav-list li a:hover,
+.mobile-nav-list li.active > a {
+  background: var(--vnit-light-blue);
+  color: var(--vnit-secondary);
+}
+
+.mobile-sub-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #f9fbfd;
+  display: none;
+}
+
+.mobile-sub-menu.open {
+  display: block;
+}
+
+.mobile-sub-menu li a {
+  padding: 10px 20px 10px 35px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--vnit-text);
+  transition: all 0.2s ease;
+}
+
+.mobile-sub-menu li.active > a,
+.mobile-sub-menu li a:hover {
+  background: var(--vnit-light-blue) !important;
+  color: var(--vnit-primary) !important;
+  font-weight: 700;
+}
+
+.mobile-sub-menu li.active > a i {
+  color: var(--vnit-accent) !important;
+}
+
+/* ==========================================================================
+   GLOBAL HERO & BREADCRUMB
+   ========================================================================== */
+
+main.main {
+  padding-top: 105px; /* Offset fixed header */
+}
+
+.global-breakcrumb {
+  background: linear-gradient(135deg, var(--vnit-primary) 0%, #173269 60%, var(--vnit-secondary) 100%);
+  padding: 40px 0 35px;
+  position: relative;
+  overflow: hidden;
+}
+
+.global-breakcrumb::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(0, 163, 224, 0.15) 0%, transparent 35%);
+  pointer-events: none;
+}
+
+.breadcrumb-zone {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.zone-title {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.zone-title::after {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 4px;
+  background: var(--vnit-secondary);
+  border-radius: 2px;
+}
+
+.breadcrumb-trail {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.breadcrumb-trail li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.breadcrumb-trail li + li::before {
+  content: '/';
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.breadcrumb-trail a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb-trail a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.breadcrumb-trail .active {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   PAGE SECTIONS & COMPONENTS
+   ========================================================================== */
+
+.section {
+  padding: 70px 0;
+}
+
+.section-bg-light {
+  background-color: var(--vnit-bg-light);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-subtitle {
+  color: var(--vnit-secondary);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.section-title {
+  color: var(--vnit-primary);
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 15px;
+  position: relative;
+}
+
+.section-desc {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--vnit-text-muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: var(--vnit-secondary);
+  margin: 15px auto 0;
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
+.btn-vnit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 11px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-vnit-primary {
+  background: var(--vnit-primary);
+  color: #ffffff;
+}
+
+.btn-vnit-primary:hover {
+  background: var(--vnit-accent);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(249, 155, 28, 0.35);
+}
+
+.btn-vnit-secondary {
+  background: var(--vnit-accent);
+  color: #ffffff;
+}
+
+.btn-vnit-secondary:hover {
+  background: var(--vnit-primary);
+  color: #ffffff;
+}
+
+.btn-vnit-outline {
+  background: transparent;
+  color: var(--vnit-primary);
+  border: 1.5px solid var(--vnit-primary);
+}
+
+.btn-vnit-outline:hover {
+  background: var(--vnit-primary);
+  color: #ffffff;
+}
+
+.btn-arrow-icon {
+  width: 14px;
+  height: auto;
+  transition: transform 0.2s;
+}
+
+.btn-vnit:hover .btn-arrow-icon {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   SERVICES (7 CỐT LÕI)
+   ========================================================================== */
+
+.service-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 30px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-top: 3px solid transparent;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(33, 59, 120, 0.12);
+  border-top-color: var(--vnit-secondary);
+}
+
+.service-num {
+  font-size: 32px;
+  font-weight: 900;
+  color: #e5ebf5;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-family: inherit;
+  line-height: 1;
+}
+
+.service-icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  background: var(--vnit-light-blue);
+  color: var(--vnit-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon-box {
+  background: var(--vnit-secondary);
+  color: #ffffff;
+}
+
+.service-card-title {
+  color: var(--vnit-primary);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.service-card-desc {
+  color: var(--vnit-text-muted);
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.service-link {
+  color: var(--vnit-secondary);
+  font-weight: 600;
+  font-size: 13.5px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  margin-top: auto;
+}
+
+.service-link:hover {
+  color: var(--vnit-primary);
+}
+
+/* ==========================================================================
+   PROJECT CARDS & POPUP
+   ========================================================================== */
+
+.project-card {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.project-thumb {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-thumb img {
+  transform: scale(1.08);
+}
+
+.project-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(33, 59, 120, 0.85);
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(4px);
+}
+
+.project-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--vnit-primary);
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.project-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  font-size: 13.5px;
+  color: var(--vnit-text-muted);
+}
+
+.project-meta li {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.project-meta li strong {
+  color: var(--vnit-text);
+  min-width: 85px;
+}
+
+/* ==========================================================================
+   CAPABILITY CARDS & STATS
+   ========================================================================== */
+
+.cap-box {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 30px;
+  border: 1px solid var(--vnit-border);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.cap-box:hover {
+  border-color: var(--vnit-secondary);
+  box-shadow: 0 8px 25px rgba(0, 130, 196, 0.1);
+}
+
+.cap-icon {
+  font-size: 40px;
+  color: var(--vnit-secondary);
+  margin-bottom: 15px;
+}
+
+.cap-title {
+  color: var(--vnit-primary);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.cap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cap-list li {
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--vnit-border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+}
+
+.cap-list li:last-child {
+  border-bottom: none;
+}
+
+.cap-list li i {
+  color: #10b981;
+  font-size: 16px;
+}
+
+.stat-counter-wrap {
+  background: linear-gradient(135deg, var(--vnit-primary) 0%, #152952 100%);
+  color: #ffffff;
+  padding: 50px 0;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 15px;
+}
+
+.stat-number {
+  font-size: 44px;
+  font-weight: 900;
+  color: var(--vnit-cyan);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #e2e8f0;
+}
+
+/* ==========================================================================
+   TABSLET SUB-NAV FOR GIỚI THIỆU & NĂNG LỰC & DỊCH VỤ
+   ========================================================================== */
+
+.vnit-tabs-container {
+  padding-top: 25px !important;
+}
+
+.vnit-tabs-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 35px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.vnit-tabs-nav li {
+  margin: 0;
+  cursor: pointer;
+}
+
+.vnit-tabs-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: #f1f4f8;
+  color: var(--vnit-primary);
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+.vnit-tabs-nav li.active a,
+.vnit-tabs-nav a:hover {
+  background: var(--vnit-primary) !important;
+  color: #ffffff !important;
+  border-bottom-color: var(--vnit-secondary) !important;
+}
+
+.vnit-tabs-nav li.active a i,
+.vnit-tabs-nav a:hover i {
+  color: #ffffff !important;
+}
+
+.vnit-tab-pane {
+  display: none;
+}
+
+.vnit-tab-pane.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   FOOTER (VNIT INDUSTRIAL DESIGN)
+   ========================================================================== */
+
+footer {
+  background: #06192c;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+footer .top-wrap {
+  padding: 60px 0 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: block;
+}
+
+footer .title-ft {
+  color: var(--vnit-accent);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+footer .title-ft::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--vnit-accent);
+}
+
+footer .footer-desc {
+  color: #a0aec0;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+footer .social-list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .social-list li a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-size: 16px;
+}
+
+footer .social-list li a:hover {
+  background: var(--vnit-secondary);
+  transform: translateY(-2px);
+}
+
+footer .menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .menu-list li {
+  margin-bottom: 10px;
+}
+
+footer .menu-list li a {
+  color: #cbd5e0;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer .menu-list li a:hover {
+  color: var(--vnit-cyan);
+  padding-left: 5px;
+}
+
+footer .subscribe-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+footer .subscribe-form input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13.5px;
+  outline: none;
+}
+
+footer .subscribe-form input:focus {
+  border-color: var(--vnit-secondary);
+}
+
+footer .subscribe-form button {
+  background: var(--vnit-secondary);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 0 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+footer .subscribe-form button:hover {
+  background: var(--vnit-cyan);
+}
+
+footer .bottom-wrap {
+  padding: 20px 0;
+  font-size: 13px;
+  color: #a0aec0;
+}
+
+footer .bottom-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* ==========================================================================
+   MODAL POPUPS (FOR PROJECTS & APPLICATIONS)
+   ========================================================================= */
+
+.vnit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 3000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.vnit-modal.show {
+  display: flex;
+  animation: fadeIn 0.25s ease;
+}
+
+.vnit-modal-content {
+  background: #ffffff;
+  border-radius: 8px;
+  max-width: 720px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+
+.vnit-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666666;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.vnit-modal-close:hover {
+  background: #f1f4f8;
+  color: #000000;
+}
+
+/* Toast alert */
+.vnit-toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #10b981;
+  color: #ffffff;
+  padding: 14px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: none;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ==========================================================================
+   RESPONSIVE QUERIES
+   ========================================================================== */
+
+@media (max-width: 1199px) {
+  .main-menu > li > a {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .top-wrap,
+  .bottom-wrap {
+    display: none;
+  }
+  
+  .navbar-toggler {
+    display: block;
+  }
+  
+  main.main {
+    padding-top: 65px;
+  }
+  
+  .header-wrap {
+    padding: 10px 15px;
+  }
+  
+  .zone-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .breadcrumb-zone {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .section {
+    padding: 45px 0;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+}
+
+/* ==========================================================================
+   EXPANSIVE FULL-WIDTH SYSTEM (VNIT GRAND DESIGN)
+   ========================================================================== */
+
+/* 1. Wide Container */
+.container-wide {
+  width: 100%;
+  max-width: 1560px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 35px;
+  padding-left: 35px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1600px) {
+  .container-wide {
+    max-width: 1680px;
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+}
+
+/* 2. Hero Panoramic Swiper Banner */
+.hero-banner-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #04101e;
+}
+
+.hero-swiper {
+  width: 100%;
+  height: calc(100vh - 92px);
+  min-height: 640px;
+  max-height: 880px;
+}
+
+.hero-slide-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-slide-item img.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.92);
+  transform: scale(1);
+  transition: transform 9s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.swiper-slide-active .hero-slide-item img.hero-bg-img {
+  transform: scale(1.06);
+}
+
+/* Subtle dark gradient overlay just at the bottom to ensure contrast */
+.hero-slide-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 260px;
+  background: linear-gradient(to top, rgba(4, 16, 30, 0.75) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Signature Bottom-Left Parallelogram Caption Box */
+.banner-skew-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  max-width: 72%;
+  pointer-events: auto;
+}
+
+.banner-skew-title-box {
+  background: linear-gradient(135deg, rgba(0, 102, 191, 0.95) 0%, rgba(7, 56, 99, 0.94) 65%, rgba(0, 136, 232, 0.9) 100%);
+  clip-path: polygon(0 0, 100% 0, calc(100% - 55px) 100%, 0 100%);
+  padding: 26px 85px 26px 45px;
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.35);
+  border-top: 3px solid var(--vnit-accent);
+}
+
+.banner-skew-title-box h1,
+.banner-skew-title-box h2 {
+  font-family: 'Exo', sans-serif;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  line-height: 1.3;
+  margin: 0;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.banner-skew-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 45px 18px 45px;
+}
+
+.banner-skew-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--vnit-accent);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 7px 16px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 10px rgba(249, 155, 28, 0.4);
+}
+
+@media (max-width: 1199px) {
+  .banner-skew-title-box h1,
+  .banner-skew-title-box h2 {
+    font-size: 22px;
+  }
+  .banner-skew-caption {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner-skew-caption {
+    max-width: 100%;
+  }
+  .banner-skew-title-box {
+    clip-path: none;
+    padding: 16px 20px;
+  }
+  .banner-skew-title-box h1,
+  .banner-skew-title-box h2 {
+    font-size: 18px;
+  }
+  .banner-skew-meta {
+    padding: 10px 20px 14px;
+    flex-wrap: wrap;
+  }
+  .hero-banner-section .hero-swiper {
+    height: 480px;
+    min-height: 420px;
+  }
+}
+
+/* 3. News Ticker Strip ("TIN NỔI BẬT") */
+.news-ticker-strip {
+  width: 100%;
+  background: #f7f9fb;
+  border-bottom: 1px solid var(--vnit-border);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.news-ticker-label {
+  background: var(--vnit-primary);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 13.5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 12px 35px 12px 40px;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 22px) 100%, 0 100%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 2px 0 10px rgba(0, 102, 191, 0.2);
+}
+
+.news-ticker-content {
+  flex: 1;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.ticker-marquee {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  animation: tickerScroll 38s linear infinite;
+  white-space: nowrap;
+}
+
+.ticker-marquee:hover {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--vnit-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.ticker-item:hover {
+  color: var(--vnit-primary);
+}
+
+.ticker-date {
+  font-weight: 700;
+  color: var(--vnit-primary);
+  font-size: 12.5px;
+  background: #eef6fd;
+  padding: 3px 8px;
+  border-radius: 3px;
+  border: 1px solid #c8e1f8;
+}
+
+@keyframes tickerScroll {
+  0% { transform: translateX(50%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* 4. Full-Width Statistics Banner */
+.full-stats-section {
+  width: 100%;
+  position: relative;
+  background-image: linear-gradient(rgba(247, 250, 252, 0.94), rgba(247, 250, 252, 0.94)), url('../images/background-companies-4-2-scaled.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 70px 0;
+  border-top: 1px solid var(--vnit-border);
+  border-bottom: 1px solid var(--vnit-border);
+}
+
+.stats-grid-wide {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 0 35px;
+}
+
+.stat-item-wide {
+  text-align: center;
+  padding: 32px 20px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.stat-item-wide:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 102, 191, 0.14);
+  border-color: var(--vnit-primary);
+}
+
+.stat-icon-wrap {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: #eef6fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  color: var(--vnit-primary);
+  font-size: 32px;
+  border: 1px solid #c8e1f8;
+}
+
+.stat-number-wide {
+  font-family: 'Exo', sans-serif;
+  font-size: 44px;
+  font-weight: 900;
+  color: var(--vnit-primary);
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.stat-title-wide {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--vnit-text);
+  margin-bottom: 4px;
+}
+
+.stat-desc-wide {
+  font-size: 13.5px;
+  color: var(--vnit-text-muted);
+}
+
+@media (max-width: 991px) {
+  .stats-grid-wide {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .stats-grid-wide {
+    grid-template-columns: 1fr;
+  }
+  .stat-number-wide {
+    font-size: 36px;
+  }
+}
+
+/* ============================================================ */
+/* CHUAN TOI UU HINH ANH TRAN VIEN & VIDEO YOUTUBE RESPONSIVE   */
+/* ============================================================ */
+img[data-cms-fit="cover"],
+.service-card img,
+.project-card img,
+.news-card img,
+.facility-card img,
+.cap-box img,
+.facility-gallery img {
+  object-fit: cover !important;
+  object-position: center !important;
+  max-width: 100%;
+}
+
+.vnit-video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #000;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+}
+
+.vnit-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/* ============================================================ */
+/* PTSC & GDC MOTION DESIGN SYSTEM (HIỆU ỨNG TỪ THƯ MỤC GD)    */
+/* ============================================================ */
+
+/* 1. Keyframes chuẩn trích từ GD/www.ptsc.com.vn/animation.sass */
+@keyframes animTop {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animBottom {
+  from {
+    opacity: 0;
+    transform: translateY(-45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animLeft {
+  from {
+    opacity: 0;
+    transform: translateX(45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes animRight {
+  from {
+    opacity: 0;
+    transform: translateX(-45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes animZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes animZoomOut {
+  from {
+    opacity: 0;
+    transform: scale(1.12);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes animTitle {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes animContent {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 2. Scroll Reveal Base Classes */
+.vnit-reveal-init {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vnit-reveal-init.vnit-fade-up {
+  transform: translateY(35px);
+}
+.vnit-reveal-init.vnit-fade-down {
+  transform: translateY(-35px);
+}
+.vnit-reveal-init.vnit-fade-left {
+  transform: translateX(35px);
+}
+.vnit-reveal-init.vnit-fade-right {
+  transform: translateX(-35px);
+}
+.vnit-reveal-init.vnit-zoom-in {
+  transform: scale(0.9);
+}
+
+/* Revealed state */
+.vnit-reveal-init.vnit-revealed {
+  opacity: 1;
+  transform: none !important;
+}
+
+/* Data-animate direct animation support (PTSC syntax) */
+.animate[data-animate] {
+  animation-duration: 0.9s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Stagger Delays for Grids */
+.vnit-delay-1 { transition-delay: 0.08s !important; animation-delay: 0.08s !important; }
+.vnit-delay-2 { transition-delay: 0.16s !important; animation-delay: 0.16s !important; }
+.vnit-delay-3 { transition-delay: 0.24s !important; animation-delay: 0.24s !important; }
+.vnit-delay-4 { transition-delay: 0.32s !important; animation-delay: 0.32s !important; }
+.vnit-delay-5 { transition-delay: 0.40s !important; animation-delay: 0.40s !important; }
+.vnit-delay-6 { transition-delay: 0.48s !important; animation-delay: 0.48s !important; }
+.vnit-delay-7 { transition-delay: 0.56s !important; animation-delay: 0.56s !important; }
+
+/* 3. Hero Banner Ken Burns & Slide Transition */
+.hero-banner-section .hero-bg-img {
+  transform: scale(1);
+  transition: transform 6s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.hero-banner-section .swiper-slide-active .hero-bg-img {
+  transform: scale(1.08);
+}
+
+.hero-banner-section .swiper-slide-active .banner-skew-title-box {
+  animation: animTitle 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-banner-section .swiper-slide-active .banner-skew-meta {
+  animation: animTop 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+/* 4. Enhanced Card Hover Micro-Interactions (GD PTSC Style) */
+.service-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0, 102, 191, 0.12);
+  border-top-color: var(--vnit-primary) !important;
+}
+
+.service-card .service-icon-box {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.35s ease;
+}
+
+.service-card:hover .service-icon-box {
+  transform: scale(1.1) rotate(4deg);
+}
+
+.project-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
+}
+
+.project-thumb {
+  overflow: hidden;
+  position: relative;
+}
+
+.project-thumb img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+.project-card:hover .project-thumb img {
+  transform: scale(1.08);
+}
+
+.cap-box {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cap-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+}
+
+.cap-box .cap-icon {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cap-box:hover .cap-icon {
+  transform: scale(1.15);
+}
+
+/* Stat Items Hover & Counter Highlighting */
+.stat-item-wide {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.35s ease;
+}
+
+.stat-item-wide:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.stat-item-wide .stat-icon-wrap {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stat-item-wide:hover .stat-icon-wrap {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+/* Button interactive shine sweep */
+.btn-vnit {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-vnit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.btn-vnit:hover::before {
+  left: 150%;
+}
+
+.btn-vnit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 102, 191, 0.25);
+}
+
+/* Partner Logo hover effect */
+.partner-logo-box, [style*="border-radius: 6px; padding: 12px 20px;"] {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.partner-logo-box:hover, [style*="border-radius: 6px; padding: 12px 20px;"]:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+  border-color: var(--vnit-primary) !important;
+}
+
+/* Safety & CMS Editing Mode: Disable transforms so Visual Editor remains 100% steady */
+body.cms-editing-active .vnit-reveal-init {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+
+/* ============================================================ */
+/* FLY-IN LOGO CONVERGENCE EFFECT (LOGO TỪ NGOÀI XUNG QUANH BAY VÀO) */
+/* ============================================================ */
+.partner-fly-section {
+  overflow: hidden !important;
+  position: relative;
+}
+
+.partner-fly-cluster {
+  perspective: 1200px;
+}
+
+.partner-fly-item {
+  opacity: 0;
+  transform: translate3d(var(--fly-x, 0px), var(--fly-y, -200px), 0) scale(var(--fly-s, 0.45)) rotate(var(--fly-r, 0deg));
+  transition: transform 1.1s cubic-bezier(0.22, 1.25, 0.36, 1), opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  transition-delay: var(--fly-delay, 0s);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+/* 12 Vector tọa độ phân bố 360 độ vòng cung xung quanh */
+.partner-fly-item.partner-fly-1,
+.partner-fly-item:nth-child(1)  { --fly-x: -360px; --fly-y: -190px; --fly-r: -22deg; --fly-s: 0.4; --fly-delay: 0.05s; }
+.partner-fly-item.partner-fly-2,
+.partner-fly-item:nth-child(2)  { --fly-x: -240px; --fly-y: -250px; --fly-r: -15deg; --fly-s: 0.4; --fly-delay: 0.10s; }
+.partner-fly-item.partner-fly-3,
+.partner-fly-item:nth-child(3)  { --fly-x: -100px; --fly-y: -290px; --fly-r: -8deg;  --fly-s: 0.4; --fly-delay: 0.15s; }
+.partner-fly-item.partner-fly-4,
+.partner-fly-item:nth-child(4)  { --fly-x: 0px;    --fly-y: -310px; --fly-r: 0deg;   --fly-s: 0.4; --fly-delay: 0.20s; }
+.partner-fly-item.partner-fly-5,
+.partner-fly-item:nth-child(5)  { --fly-x: 100px;  --fly-y: -290px; --fly-r: 8deg;   --fly-s: 0.4; --fly-delay: 0.25s; }
+.partner-fly-item.partner-fly-6,
+.partner-fly-item:nth-child(6)  { --fly-x: 240px;  --fly-y: -250px; --fly-r: 15deg;  --fly-s: 0.4; --fly-delay: 0.30s; }
+.partner-fly-item.partner-fly-7,
+.partner-fly-item:nth-child(7)  { --fly-x: 360px;  --fly-y: -190px; --fly-r: 22deg;  --fly-s: 0.4; --fly-delay: 0.35s; }
+.partner-fly-item.partner-fly-8,
+.partner-fly-item:nth-child(8)  { --fly-x: 410px;  --fly-y: 0px;    --fly-r: 18deg;  --fly-s: 0.4; --fly-delay: 0.40s; }
+.partner-fly-item.partner-fly-9,
+.partner-fly-item:nth-child(9)  { --fly-x: 380px;  --fly-y: 170px;  --fly-r: 15deg;  --fly-s: 0.4; --fly-delay: 0.45s; }
+.partner-fly-item.partner-fly-10,
+.partner-fly-item:nth-child(10) { --fly-x: -320px; --fly-y: 230px;  --fly-r: -18deg; --fly-s: 0.4; --fly-delay: 0.50s; }
+.partner-fly-item.partner-fly-11,
+.partner-fly-item:nth-child(11) { --fly-x: 0px;    --fly-y: 270px;  --fly-r: 0deg;   --fly-s: 0.4; --fly-delay: 0.55s; }
+.partner-fly-item.partner-fly-12,
+.partner-fly-item:nth-child(12) { --fly-x: 320px;  --fly-y: 230px;  --fly-r: 18deg;  --fly-s: 0.4; --fly-delay: 0.60s; }
+
+/* Trạng thái sau khi hội tụ và xếp vào vị trí hoàn hảo */
+.partner-fly-cluster.is-assembled .partner-fly-item {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+}
+
+/* Hover mượt mà trên từng logo sau khi đã bay vào ổn định */
+.partner-fly-cluster.is-assembled .partner-fly-item:hover {
+  transform: translate3d(0, -6px, 0) scale(1.05) !important;
+  box-shadow: 0 12px 24px rgba(0, 102, 191, 0.16) !important;
+  border-color: var(--vnit-primary) !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease !important;
+  transition-delay: 0s !important;
+  z-index: 10;
+}
+
+/* Thích ứng mượt mà trên Mobile & Tablet */
+@media (max-width: 768px) {
+  .partner-fly-item.partner-fly-1,
+  .partner-fly-item:nth-child(1)  { --fly-x: -130px; --fly-y: -90px;  }
+  .partner-fly-item.partner-fly-2,
+  .partner-fly-item:nth-child(2)  { --fly-x: -90px;  --fly-y: -110px; }
+  .partner-fly-item.partner-fly-3,
+  .partner-fly-item:nth-child(3)  { --fly-x: -45px;  --fly-y: -130px; }
+  .partner-fly-item.partner-fly-4,
+  .partner-fly-item:nth-child(4)  { --fly-x: 0px;    --fly-y: -140px; }
+  .partner-fly-item.partner-fly-5,
+  .partner-fly-item:nth-child(5)  { --fly-x: 45px;   --fly-y: -130px; }
+  .partner-fly-item.partner-fly-6,
+  .partner-fly-item:nth-child(6)  { --fly-x: 90px;   --fly-y: -110px; }
+  .partner-fly-item.partner-fly-7,
+  .partner-fly-item:nth-child(7)  { --fly-x: 130px;  --fly-y: -90px;  }
+  .partner-fly-item.partner-fly-8,
+  .partner-fly-item:nth-child(8)  { --fly-x: 140px;  --fly-y: 0px;    }
+  .partner-fly-item.partner-fly-9,
+  .partner-fly-item:nth-child(9)  { --fly-x: 130px;  --fly-y: 90px;   }
+  .partner-fly-item.partner-fly-10,
+  .partner-fly-item:nth-child(10) { --fly-x: -110px; --fly-y: 100px;  }
+  .partner-fly-item.partner-fly-11,
+  .partner-fly-item:nth-child(11) { --fly-x: 0px;    --fly-y: 120px;  }
+  .partner-fly-item.partner-fly-12,
+  .partner-fly-item:nth-child(12) { --fly-x: 110px;  --fly-y: 100px;  }
+}
+
+/* Đảm bảo tuyệt đối trong chế độ Visual Editor của CMS */
+body.cms-editing-active .partner-fly-item {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+
+/* ============================================================ */
+/* MODERN TECH SERVICE CARDS & FLY-IN ENTRANCE (DỊCH VỤ CÔNG NGHỆ) */
+/* ============================================================ */
+.service-fly-section {
+  overflow: hidden !important;
+  position: relative;
+}
+
+.service-fly-cluster {
+  perspective: 1200px;
+}
+
+.modern-tech-card {
+  background: #ffffff;
+  border: 1px solid var(--vnit-border);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+  position: relative;
+}
+
+.modern-tech-card .service-thumb-wrap {
+  position: relative;
+  width: 100%;
+  height: 185px;
+  overflow: hidden;
+  background-color: #073863;
+}
+
+.modern-tech-card .service-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+  object-position: center !important;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+.modern-tech-card:hover .service-thumb-img {
+  transform: scale(1.08);
+}
+
+.modern-tech-card .service-thumb-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(4, 16, 30, 0.15) 0%, rgba(4, 16, 30, 0.75) 100%);
+  pointer-events: none;
+}
+
+.modern-tech-card .service-tech-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(0, 102, 191, 0.9);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  z-index: 2;
+}
+
+.modern-tech-card .service-num-modern {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-family: 'Exo', sans-serif;
+  font-size: 26px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  letter-spacing: 1px;
+  z-index: 2;
+}
+
+.modern-tech-card .service-content-wrap {
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.modern-tech-card .service-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  background: var(--vnit-light-blue);
+  color: var(--vnit-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 14px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.35s ease, color 0.35s ease;
+}
+
+.modern-tech-card:hover .service-icon-box {
+  transform: scale(1.1) rotate(5deg);
+  background-color: var(--vnit-primary);
+  color: #ffffff;
+}
+
+.modern-tech-card .service-card-title {
+  font-size: 16.5px;
+  font-weight: 800;
+  color: var(--vnit-primary-dark);
+  line-height: 1.45;
+  margin: 0 0 10px;
+  min-height: 48px;
+  transition: color 0.3s ease;
+}
+
+.modern-tech-card:hover .service-card-title {
+  color: var(--vnit-primary);
+}
+
+.modern-tech-card .service-card-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--vnit-text-muted);
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.modern-tech-card .service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--vnit-accent);
+  font-weight: 700;
+  font-size: 13.5px;
+  text-decoration: none;
+  transition: gap 0.25s ease, color 0.25s ease;
+  margin-top: auto;
+}
+
+.modern-tech-card .service-link:hover {
+  gap: 12px;
+  color: var(--vnit-accent-hover);
+}
+
+.modern-tech-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(0, 102, 191, 0.16);
+  border-color: var(--vnit-primary);
+}
+
+/* ============================================================ */
+/* FLY-IN MOTION CHO 7 DỊCH VỤ (BAY VÀO TỪ CÁC HƯỚNG)           */
+/* ============================================================ */
+.service-fly-item {
+  opacity: 0;
+  transform: translate3d(var(--s-fly-x, 0px), var(--s-fly-y, 100px), 0) scale(var(--s-fly-s, 0.88)) rotate(var(--s-fly-r, 0deg));
+  transition: transform 1.1s cubic-bezier(0.22, 1.2, 0.36, 1), opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--s-fly-delay, 0s);
+  will-change: transform, opacity;
+}
+
+.service-fly-cluster.is-assembled .service-fly-item {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+}
+
+/* Tọa độ bay vào cho từng dịch vụ */
+.service-fly-item:nth-child(1) { --s-fly-x: -160px; --s-fly-y: -60px; --s-fly-r: -5deg; --s-fly-delay: 0.08s; }
+.service-fly-item:nth-child(2) { --s-fly-x: 0px;    --s-fly-y: -120px; --s-fly-r: 0deg;   --s-fly-delay: 0.16s; }
+.service-fly-item:nth-child(3) { --s-fly-x: 160px;  --s-fly-y: -60px; --s-fly-r: 5deg;  --s-fly-delay: 0.24s; }
+.service-fly-item:nth-child(4) { --s-fly-x: -180px; --s-fly-y: 60px;  --s-fly-r: -4deg; --s-fly-delay: 0.32s; }
+.service-fly-item:nth-child(5) { --s-fly-x: 0px;    --s-fly-y: 120px; --s-fly-r: 0deg;   --s-fly-delay: 0.40s; }
+.service-fly-item:nth-child(6) { --s-fly-x: 180px;  --s-fly-y: 60px;  --s-fly-r: 4deg;  --s-fly-delay: 0.48s; }
+.service-fly-item:nth-child(7) { --s-fly-x: 0px;    --s-fly-y: 140px; --s-fly-r: 0deg;   --s-fly-delay: 0.56s; }
+
+@media (max-width: 768px) {
+  .service-fly-item:nth-child(1) { --s-fly-x: -40px; --s-fly-y: 40px; }
+  .service-fly-item:nth-child(2) { --s-fly-x: 40px;  --s-fly-y: 40px; }
+  .service-fly-item:nth-child(3) { --s-fly-x: -40px; --s-fly-y: 40px; }
+  .service-fly-item:nth-child(4) { --s-fly-x: 40px;  --s-fly-y: 40px; }
+  .service-fly-item:nth-child(5) { --s-fly-x: -40px; --s-fly-y: 40px; }
+  .service-fly-item:nth-child(6) { --s-fly-x: 40px;  --s-fly-y: 40px; }
+  .service-fly-item:nth-child(7) { --s-fly-x: 0px;   --s-fly-y: 40px; }
+}
+
+/* ============================================================ */
+/* MODERN TECH CAPABILITY CARDS & FLY-IN (HỒ SƠ NĂNG LỰC)      */
+/* ============================================================ */
+.cap-fly-section {
+  overflow: hidden !important;
+  position: relative;
+}
+
+.modern-tech-cap {
+  background: #ffffff;
+  border: 1px solid var(--vnit-border);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+}
+
+.modern-tech-cap .cap-thumb-wrap {
+  position: relative;
+  width: 100%;
+  height: 165px;
+  overflow: hidden;
+  background: #073863;
+}
+
+.modern-tech-cap .cap-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+  object-position: center !important;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modern-tech-cap:hover .cap-thumb-img {
+  transform: scale(1.08);
+}
+
+.modern-tech-cap .cap-thumb-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(180deg, rgba(7, 56, 99, 0.2) 0%, rgba(7, 56, 99, 0.75) 100%);
+  pointer-events: none;
+}
+
+.modern-tech-cap .cap-tech-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(0, 102, 191, 0.9);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 2;
+}
+
+.modern-tech-cap .cap-icon-float {
+  position: absolute;
+  bottom: 12px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--vnit-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.modern-tech-cap:hover .cap-icon-float {
+  transform: scale(1.15) rotate(10deg);
+}
+
+.modern-tech-cap .cap-body-wrap {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.modern-tech-cap .cap-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--vnit-primary);
+  margin: 0 0 12px;
+}
+
+.modern-tech-cap:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0, 102, 191, 0.15);
+  border-color: var(--vnit-primary);
+}
+
+/* ============================================================ */
+/* FLY-IN MOTION CHO 4 KHỐI NĂNG LỰC                            */
+/* ============================================================ */
+.cap-fly-banner {
+  opacity: 0;
+  transform: translate3d(0, -50px, 0) scale(0.92);
+  transition: transform 1s cubic-bezier(0.22, 1.2, 0.36, 1), opacity 0.8s ease;
+}
+
+.cap-fly-cluster.is-assembled .cap-fly-banner {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.cap-fly-item {
+  opacity: 0;
+  transform: translate3d(var(--c-fly-x, 0px), var(--c-fly-y, 100px), 0) scale(var(--c-fly-s, 0.88)) rotate(var(--c-fly-r, 0deg));
+  transition: transform 1.1s cubic-bezier(0.22, 1.2, 0.36, 1), opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--c-fly-delay, 0s);
+  will-change: transform, opacity;
+}
+
+.cap-fly-cluster.is-assembled .cap-fly-item {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+}
+
+.cap-fly-item:nth-child(1) { --c-fly-x: -160px; --c-fly-y: 40px;  --c-fly-r: -5deg; --c-fly-delay: 0.1s; }
+.cap-fly-item:nth-child(2) { --c-fly-x: -50px;  --c-fly-y: 80px;  --c-fly-r: -2deg; --c-fly-delay: 0.2s; }
+.cap-fly-item:nth-child(3) { --c-fly-x: 50px;   --c-fly-y: 80px;  --c-fly-r: 2deg;  --c-fly-delay: 0.3s; }
+.cap-fly-item:nth-child(4) { --c-fly-x: 160px;  --c-fly-y: 40px;  --c-fly-r: 5deg;  --c-fly-delay: 0.4s; }
+
+@media (max-width: 768px) {
+  .cap-fly-item:nth-child(1) { --c-fly-x: -30px; --c-fly-y: 30px; }
+  .cap-fly-item:nth-child(2) { --c-fly-x: 30px;  --c-fly-y: 30px; }
+  .cap-fly-item:nth-child(3) { --c-fly-x: -30px; --c-fly-y: 30px; }
+  .cap-fly-item:nth-child(4) { --c-fly-x: 30px;  --c-fly-y: 30px; }
+}
+
+/* Đảm bảo trạng thái tĩnh 100% trong CMS Editor */
+body.cms-editing-active .service-fly-item,
+body.cms-editing-active .cap-fly-item,
+body.cms-editing-active .cap-fly-banner {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+
+/* ============================================================ */
+/* HORIZONTAL FULL-WIDTH TECH SERVICE CARDS (XẾP THEO CHIỀU NGANG) */
+/* ============================================================ */
+.services-horizontal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.service-hor-card {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background: #ffffff;
+  border: 1px solid var(--vnit-border);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.service-hor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0, 102, 191, 0.14);
+  border-color: var(--vnit-primary);
+}
+
+/* KHÓA KÍCH THƯỚC ĐỒNG BỘ CHUẨN TRÊN DESKTOP (THAM CHIẾU CARD 04) */
+@media (min-width: 992px) {
+  .service-hor-card {
+    height: 305px !important;
+    min-height: 305px !important;
+    max-height: 305px !important;
+  }
+}
+
+/* CỘT ẢNH BÊN TRÁI: CỐ ĐỊNH KÍCH THƯỚC KHUNG HÌNH (36% RỘNG, 100% CAO) */
+.service-hor-thumb {
+  flex: 0 0 36% !important;
+  max-width: 36% !important;
+  min-width: 280px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  background: #073863;
+  height: 100% !important;
+}
+
+/* HÌNH ẢNH: TỰ ĐỘNG THÍCH ỨNG TRÀN KHUNG, BẢO TOÀN TỈ LỆ 100%, KHÔNG MÉO, KHÔNG ĐẨY CHIỀU CAO */
+.service-hor-img {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+  display: block !important;
+}
+
+/* Tinh chỉnh tiêu cự riêng cho Card 02 (tập trung 2 kỹ sư giàn khoan & ống van) */
+.service-hor-item:nth-child(2) .service-hor-img {
+  object-position: center 25% !important;
+}
+
+.service-hor-card:hover .service-hor-img {
+  transform: scale(1.08);
+}
+
+.service-hor-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(180deg, rgba(7, 56, 99, 0.08) 0%, rgba(7, 56, 99, 0.7) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.service-hor-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(0, 102, 191, 0.92);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  z-index: 2;
+}
+
+.service-hor-num {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-family: 'Exo', sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  letter-spacing: 1px;
+  z-index: 2;
+  line-height: 1;
+}
+
+/* CỘT NỘI DUNG BÊN PHẢI (64%): PHÂN BỔ ĐỀU ĐẶN, GỌN GÀNG, ĐỒNG BỘ */
+.service-hor-body {
+  flex: 1 1 64% !important;
+  max-width: 64% !important;
+  padding: 20px 26px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  height: 100% !important;
+}
+
+.service-hor-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.service-hor-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: var(--vnit-light-blue);
+  color: var(--vnit-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.service-hor-card:hover .service-hor-icon {
+  transform: scale(1.08) rotate(4deg);
+  background: var(--vnit-primary);
+  color: #ffffff;
+}
+
+.service-hor-category {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--vnit-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.service-hor-title {
+  font-size: 17.5px;
+  font-weight: 800;
+  color: var(--vnit-primary-dark);
+  line-height: 1.3;
+  margin: 0 0 6px;
+  transition: color 0.25s ease;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.service-hor-card:hover .service-hor-title {
+  color: var(--vnit-primary);
+}
+
+.service-hor-desc {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--vnit-text-muted);
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Danh sách gạch đầu dòng tính năng công nghệ (2 cột) */
+.service-hor-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px 14px;
+  margin-bottom: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.service-hor-highlights li {
+  font-size: 12px;
+  color: #334155;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  line-height: 1.35;
+}
+
+.service-hor-highlights li i {
+  color: var(--vnit-primary);
+  font-size: 14px;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+/* Thanh hành động chân thẻ */
+.service-hor-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 8px;
+  border-top: 1px solid #f1f5f9;
+  margin-top: auto;
+}
+
+.service-hor-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--vnit-primary);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 12.5px;
+  padding: 7px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.service-hor-btn:hover {
+  background: var(--vnit-primary-dark);
+  transform: translateX(2px);
+}
+
+.service-hor-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--vnit-primary);
+  font-weight: 700;
+  font-size: 12.5px;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.service-hor-btn-outline:hover {
+  color: var(--vnit-accent);
+}
+
+/* Fly-in Entrance cho từng hàng ngang */
+.service-hor-item {
+  opacity: 0;
+  transform: translate3d(var(--h-fly-x, 0px), 50px, 0);
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.75s ease;
+  transition-delay: var(--h-fly-delay, 0s);
+  will-change: transform, opacity;
+}
+
+.service-fly-cluster.is-assembled .service-hor-item {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* So le trái phải nhẹ nhàng khi bay vào */
+.service-hor-item:nth-child(odd)  { --h-fly-x: -50px; }
+.service-hor-item:nth-child(even) { --h-fly-x: 50px;  }
+
+.service-hor-item:nth-child(1) { --h-fly-delay: 0.06s; }
+.service-hor-item:nth-child(2) { --h-fly-delay: 0.12s; }
+.service-hor-item:nth-child(3) { --h-fly-delay: 0.18s; }
+.service-hor-item:nth-child(4) { --h-fly-delay: 0.24s; }
+.service-hor-item:nth-child(5) { --h-fly-delay: 0.30s; }
+.service-hor-item:nth-child(6) { --h-fly-delay: 0.36s; }
+.service-hor-item:nth-child(7) { --h-fly-delay: 0.42s; }
+
+/* Responsive Mobile & Tablet */
+@media (max-width: 991px) {
+  .service-hor-card {
+    flex-direction: column;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+  }
+  .service-hor-thumb {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    height: 220px !important;
+    min-height: 220px !important;
+  }
+  .service-hor-body {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding: 20px 18px !important;
+    height: auto !important;
+  }
+  .service-hor-highlights {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .service-hor-item:nth-child(odd),
+  .service-hor-item:nth-child(even) {
+    --h-fly-x: 0px;
+  }
+}
+
+/* Đảm bảo trạng thái tĩnh 100% trong CMS Editor */
+body.cms-editing-active .service-hor-item {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+body.cms-editing-active .service-hor-card {
+  max-height: none !important;
+  height: auto !important;
+}

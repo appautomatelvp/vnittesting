@@ -1,0 +1,97 @@
+main 
+	padding-top: 70px !important
+	@media(min-width: 1280px)
+		padding-top: 0 !important
+.edit-link i:before
+	content: '✏️'
+.box-category
+	border-left: 2px solid $light-blue
+	position: sticky
+	z-index: 111
+	top: 70px
+	.category-title
+		padding: 9px 20px 
+		&.active
+			em
+				transform: rotate(180deg)
+	.category-list
+		display: none
+		a
+			display: block
+			padding: 13px 30px
+			font-size: r(16px)
+			font-weight: 400
+			color: #333333
+			transition: .2s ease-in-out all
+			background: #f5f5f5
+		li
+			+ li 
+				border-top: thin solid #e1e1e1
+			&.active, &:hover
+				a
+					color: $main
+					text-shadow: 0 0 1px rgba($main, 1)
+	@media(min-width: 1024px)
+		.category-title
+			pointer-events: none !important
+			em
+				display: none !important
+		.category-list
+			display: block !important
+	@media(min-width: 1280px)
+		top: 120px
+.navbar-category
+	border-bottom: thin solid #e5e5e5
+	a
+		text-align: center
+		color: $text-bb
+		display: block
+		padding-top: 15px
+		padding-bottom: 15px
+		transition: .2s ease-in-out all
+		position: relative
+		font-weight: 500
+		&:before
+			content: url(../img/icon/arrow-top-blue.png)
+			position: absolute
+			bottom: -15px
+			left: 50%
+			transform: translateX(-50%)
+			z-index: 11
+			pointer-events: none 
+			transition: .2s ease-in-out all
+			opacity: 0
+	li
+		display: flex
+		justify-content: center
+		align-items: center
+		&.active
+			a
+				color: $main
+				&:before
+					opacity: 1
+					bottom: -7px
+	@media(min-width: 768px)
+		a
+			font-size: 16px
+		li
+			margin-right: 15px
+	@media(min-width: 1280px)
+		padding-right: 20px !important
+		padding-left: 20px !important
+		justify-content: space-around
+		a
+			padding-top: 0
+			padding-bottom: 21.5px
+			font-size: 18px
+			&:hover
+				color: $main
+		li
+			&.active, &:hover
+				a
+					transform: scale(1.1)
+					&:before
+						bottom: -5px
+	@media(min-width: 1440px)
+		padding-right: 50px !important
+		padding-left: 50px !important

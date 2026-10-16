@@ -1,0 +1,92 @@
+.global-breakcrumb
+	position: relative
+.breadcrumb-zone
+	> .breadcrumb
+		width: 100%
+.zone-name
+	display: flex
+	align-items: center
+	position: relative
+	.zone-title
+		position: absolute
+		top: 0
+		left: 0
+		height: calc(100% + 10px)
+		z-index: 11
+		width: max-content
+		max-height: 80px
+		display: flex
+		align-items: center
+		padding-right: 40px
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			background: $main
+			transform: skewX(-45deg)
+			width: 1000%
+			height: 100%
+			z-index: -1
+			pointer-events: none 
+	@media(min-width: 1280px)
+		.zone-title
+			height: 80px
+			padding-right: 65px
+ol.breadcrumb
+	display: flex
+	align-items: center
+	padding-top: 10px
+	padding-bottom: 10px
+	list-style: none
+	padding-left: 0
+	max-width: 50%
+	flex-wrap: wrap
+	justify-content: flex-end
+	margin-left: auto
+	&:before
+		content: ''
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		background: #f5f5f5
+		width: 100%
+		height: 100%
+		z-index: 0
+		pointer-events: none 
+		
+	a
+		color: #999999
+		font-weight: 400
+		font-size: r(16px)
+		text-align: right
+		&.active
+			color: #333333
+	li
+		display: flex
+		position: relative
+		align-items: center
+		padding: 0 7px
+		&:first-child
+			padding-left: 0
+		+ li
+			&::before
+				font-family: 'Material Icons'
+				content: "chevron_right"
+				top: 0
+				left: -7px
+				position: absolute
+				color: #333333
+				font-size: 16px
+				line-height: 1.3
+	@media(min-width: 1280px)
+		padding-top: 18px
+		padding-bottom: 18px
+		max-width: 70%
+		li
+			padding-right: 20px
+			+ li
+				padding-left: 20px
+		a
+			width: max-content

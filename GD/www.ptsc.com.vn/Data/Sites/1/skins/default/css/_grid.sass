@@ -1,0 +1,142 @@
+@use "sass:math"
+
+$layout: 100% !default
+$container: 1410px !default
+$colCount: 12 !default
+$offset: 15px !default
+
+// setting breakpoints
+$small: 576px !default
+$medium: 768px !default
+$large: 1024px !default
+$x-large: 1280px !default
+$xx-large: 1300px !default
+$xxx-large: 1400px !default
+// end setting breakpoints
+
+$grid-breakpoints: (sm: $small, md: $medium, lg: $large, xl: $x-large) !default
+// $container-breakpoints: ($small: 576px, $medium: 768px, $large: 1024px, $x-large: 1200px, $xx-large: 1280px) !default
+
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500;600;700;800;900&display=swap&family=Material+Icons&display=swap')
+
+html
+	font-family: 'Exo', sans-serif
+	line-height: 1.5
+	-webkit-text-size-adjust: 100%
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+body
+	max-width: $layout
+	margin-top: 0
+	margin-bottom: 0
+	margin-left: auto
+	margin-right: auto 
+	font-family: 'Exo', sans-serif
+	font-size: 16px
+	font-weight: 400
+	line-height: 1.5
+	background-color: $body
+	color: $black
+	&::-webkit-scrollbar
+		width: 8px
+	&::-webkit-scrollbar-track
+		background: #f1f1f1
+	&::-webkit-scrollbar-thumb
+		background: $main
+		border-radius: 3px
+		border-right: thin solid #f1f1f1
+		border-left: thin solid #f1f1f1
+	&::-webkit-scrollbar-thumb:hover
+		background: $main
+body, html 
+	font-size: 14px
+	scroll-behavior: smooth
+	@media(min-width: 1024px)
+		font-size: 15px
+	@media(min-width: 1280px)
+		font-size: 16px
+
+*
+	box-sizing: border-box
+	&::before, &::after
+		box-sizing: border-box
+
+.container
+	width: 100%
+	max-width: $container + ($offset * 2)
+	padding-right: $offset
+	padding-left: $offset
+	margin-left: auto 
+	margin-right: auto 
+	// @media(min-width: 1024px)
+	// 	padding-right: $offset * 2
+	// 	padding-left: $offset * 2
+	// 	max-width: $container + ($offset * 4)
+
+// @each $bpNumber, $maxWidth in $container-breakpoints
+// 	@media (min-width: #{$bpNumber})
+// 		.container
+// 			max-width: $maxWidth
+
+.container-fluid 
+	width: 100%
+	padding-right: $offset
+	padding-left: $offset
+	margin-right: auto
+	margin-left: auto
+
+.row
+	display: flex
+	flex-wrap: wrap 
+	margin-left: -$offset
+	margin-right: -$offset
+
+.no-gutters
+	margin-left: 0
+	margin-right: 0
+
+.no-gutters>*,
+.no-gutters>[class*="col-"]
+	padding-left: 0
+	padding-right: 0
+
+[class*="col-"]
+	position: relative
+	width: 100%
+	padding-right: $offset
+	padding-left: $offset
+
+.col
+	-ms-flex-preferred-size: 0
+	flex-basis: 0
+	-ms-flex-positive: 1
+	flex-grow: 1
+	max-width: 100%
+
+.col-auto
+	-ms-flex: 0 0 auto
+	flex: 0 0 auto
+	width: auto
+	max-width: 100%
+
+@for $col from 1 through $colCount
+	.col-#{$col}
+		flex: 0 0 (100% /$colCount * $col)
+		max-width: (100% /$colCount * $col)
+
+@each $bp, $value in $grid-breakpoints
+	@media (min-width: #{$value})
+		.col-#{$bp}
+			-ms-flex-preferred-size: 0
+			flex-basis: 0
+			-ms-flex-positive: 1
+			flex-grow: 1
+			max-width: 100%
+		.col-#{$bp}-auto
+			-ms-flex: 0 0 auto
+			flex: 0 0 auto
+			width: auto
+			max-width: 100%
+		@for $col from 1 through $colCount
+			.col-#{$bp}-#{$col}
+				flex: 0 0 (100% /$colCount * $col)
+				max-width: (100% /$colCount * $col)

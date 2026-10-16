@@ -1,0 +1,75 @@
+.HSEQ-1
+	.row
+		margin-top: -30px
+		> *
+			margin-top: 30px
+	.navbar-category
+		margin-bottom: 20px
+		li
+			margin-left: 10px
+			margin-right: 10px
+	.img-scale 
+		+img-scale(500/600)
+	.desc-wrap
+		max-width: 720px
+		text-align: justify
+	.view-more
+		margin-top: 30px
+	.btn-view-more
+		font-size: 16px
+		font-weight: 400
+		color: #999999
+		text-transform: uppercase
+		display: flex
+		align-items: center
+		img
+			margin-left: 10px
+	@media(min-width: 1280px)
+		.navbar-category
+			margin-bottom: 50px
+			li
+				margin-left: 22px
+				margin-right: 22px
+		.col-xl-5-cus
+			flex: 0 0 43.75%
+			max-width: 43.75%
+		.col-xl-7-cus
+			flex: 0 0 56.25%
+			max-width: 56.25%
+.HSEQ-2
+	.about-6-item
+		.img-scale
+			margin-bottom: 0
+			+img-scale(381/270)
+	@media(min-width: 1280px)
+		.box-content
+			padding-top: 70px
+			padding-bottom: 55px
+.HSEQ-3
+	@media(min-width: 1280px)
+		.background-div
+			padding-top: 50px
+			padding-bottom: 90px
+.HSEQ-4
+	.main-button
+		margin-top: 20px
+		> *
+			margin-left: 10px
+			margin-right: 10px
+	.button-prev, .button-next
+		img
+			height: 30px
+	@media(min-width: 1280px)
+		.button-prev, .button-next
+			img
+				height: 42px
+		.main-button
+			margin: 0
+			> *
+				margin: 0
+	@media(min-width: 1580px)
+		.main-button
+			.button-prev
+				left: -60px
+			.button-next
+				right: -60px

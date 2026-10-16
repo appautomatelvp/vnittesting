@@ -1,0 +1,14 @@
+.banner-child
+	.img-scale
+		+img-scale(1280/1920)
+	@media(min-width: 768px)
+		.img-scale
+			+img-scale(600/1920)
+	@media(min-width: 1280px)
+		.img-scale
+			+img-scale(740/1920)
+.small-page, .news-detail-page
+	@media(min-width: 1024px)
+		.banner-child
+			.img-scale
+				+img-scale(450/1920)

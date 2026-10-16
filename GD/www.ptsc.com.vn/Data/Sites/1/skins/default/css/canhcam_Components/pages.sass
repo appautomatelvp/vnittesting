@@ -1,0 +1,45 @@
+.modulepager
+	.pagination
+		margin-top: 20px
+		display: flex
+		list-style-type: none
+		justify-content: center
+		flex-wrap: wrap
+		padding: 0
+		li
+			margin: 10px
+			color: $main
+			display: flex
+			justify-content: center
+			align-items: center
+			&:last-child
+				margin-right: 0
+			a, span
+				width: 35px
+				height: 35px
+				// border: 1px solid #e1e1e1
+				font-size: 16px
+				color: $white
+				display: flex
+				justify-content: center
+				align-items: center
+				background: #676767
+				transition: .2s ease-in-out all
+				// border-radius: 5px
+				overflow: hidden
+				font-size: r(18px)
+
+			&.active, &:hover
+				a, span
+					color: #ffffff
+					background: $main
+					// border: 1px solid $main
+			@media(min-width: 1024px)
+				a, span
+					width: 40px
+					height: 40px
+body.searchresults
+	.modulepager
+		.pagination
+			li 
+				margin: 5px
